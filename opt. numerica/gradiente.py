@@ -50,6 +50,8 @@ crear_animacion(heatmap_rastrigin, trayectoria, "rastrigin")
 camel_max = 2
 parametros_iniciales = np.random.random(2) * camel_max * 2 - camel_max
 
+iteraciones = 1000
+
 parametros, trayectoria = descenso_por_gradiente(
     three_hump_camel_gradiente,
     parametros_iniciales,

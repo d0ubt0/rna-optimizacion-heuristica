@@ -90,7 +90,7 @@ def crear_animacion(heatmap, trayectoria, nombre=''):
         frames=len(trayectoria),
         init_func=init,
         blit=True,
-        interval=100
+        interval=33
     )
 
     ani.save(f'animacion_{nombre}.gif', writer='pillow')
