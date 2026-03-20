@@ -82,3 +82,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Animaciones
+animacion*.gif

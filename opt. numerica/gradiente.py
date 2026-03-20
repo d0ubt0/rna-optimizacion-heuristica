@@ -6,6 +6,8 @@ from funciones import (
     heatmap_3d,
     rastrigin,
     rastrigin_gradiente,
+    rosenbrock,
+    rosenbrock_gradiente,
     three_hump_camel,
     three_hump_camel_gradiente,
 )
@@ -94,3 +96,49 @@ ax_rastrigin_3d = heatmap_3d(
     max_z=rastrigin_max
 )
 crear_animacion_3d(ax_rastrigin_3d, rastrigin, trayectoria_3d, "rastrigin_3d")
+
+# Rosenbrock 2D
+rosenbrock_max = 2
+parametros_iniciales_rosen = np.random.random(2) * rosenbrock_max * 2 - rosenbrock_max
+
+parametros_rosen, trayectoria_rosen = descenso_por_gradiente(
+    rosenbrock_gradiente,
+    parametros_iniciales_rosen,
+    iteraciones,
+    tasa_de_aprendizaje
+)
+
+ax_rosen = crear_heatmap(
+    rosenbrock,
+    cantidad_puntos=2000,
+    min_x=-rosenbrock_max,
+    max_x=rosenbrock_max,
+    min_y=-rosenbrock_max,
+    max_y=rosenbrock_max
+)
+
+crear_animacion(ax_rosen, rosenbrock, trayectoria_rosen, "rosenbrock")
+
+
+# Rosenbrock 3D (f: R³ → R)
+parametros_iniciales_rosen_3d = np.random.random(3) * rosenbrock_max * 2 - rosenbrock_max
+
+parametros_rosen_3d, trayectoria_rosen_3d = descenso_por_gradiente(
+    rosenbrock_gradiente,
+    parametros_iniciales_rosen_3d,
+    iteraciones,
+    tasa_de_aprendizaje
+)
+
+ax_rosen_3d = heatmap_3d(
+    rosenbrock,
+    cantidad_puntos=30,
+    min_x=-rosenbrock_max,
+    max_x=rosenbrock_max,
+    min_y=-rosenbrock_max,
+    max_y=rosenbrock_max,
+    min_z=-rosenbrock_max,
+    max_z=rosenbrock_max
+)
+
+crear_animacion_3d(ax_rosen_3d, rosenbrock, trayectoria_rosen_3d, "rosenbrock_3d")

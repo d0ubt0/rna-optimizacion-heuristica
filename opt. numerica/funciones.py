@@ -246,3 +246,38 @@ def crear_animacion_3d(ax, f, trayectoria, nombre=''):
 
     ani.save(f'animacion_3d_{nombre}.gif', writer='pillow')
 
+def rosenbrock(parametros: np.ndarray) -> float:
+    parametros_copy = parametros.copy()
+
+    resultado = np.sum(
+        100 * (parametros_copy[1:] - parametros_copy[:-1]**2)**2
+        + (parametros_copy[:-1] - 1)**2
+    )
+
+    return resultado
+
+
+def rosenbrock_gradiente(parametros: np.ndarray) -> np.ndarray:
+    parametros_copy = parametros.copy()
+    d = parametros_copy.size
+
+    grad = np.zeros_like(parametros_copy)
+
+    # i = 0
+    grad[0] = (
+        -400 * parametros_copy[0] * (parametros_copy[1] - parametros_copy[0]**2)
+        + 2 * (parametros_copy[0] - 1)
+    )
+
+    # 1 <= i <= d-2
+    for i in range(1, d - 1):
+        grad[i] = (
+            -400 * parametros_copy[i] * (parametros_copy[i+1] - parametros_copy[i]**2)
+            + 2 * (parametros_copy[i] - 1)
+            + 200 * (parametros_copy[i] - parametros_copy[i-1]**2)
+        )
+
+    # i = d-1
+    grad[-1] = 200 * (parametros_copy[-1] - parametros_copy[-2]**2)
+
+    return grad
