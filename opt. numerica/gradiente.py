@@ -4,14 +4,14 @@ from funciones import (
     crear_animacion_3d,
     crear_heatmap,
     heatmap_3d,
+    random_seed,
     rastrigin,
     rastrigin_gradiente,
     rosenbrock,
     rosenbrock_gradiente,
-    three_hump_camel,
-    three_hump_camel_gradiente,
 )
 
+rng = np.random.default_rng(random_seed)
 
 def descenso_por_gradiente(gradiente_funcion, parametros_iniciales, iteraciones, tasa_de_aprendizaje):
     parametros = parametros_iniciales.copy()
@@ -31,7 +31,7 @@ tasa_de_aprendizaje = 0.001
 
 # Rastrigin 2D
 rastrigin_max = 5.12
-parametros_iniciales = np.random.random(2) * rastrigin_max * 2 - rastrigin_max
+parametros_iniciales = rng.random(2) * rastrigin_max * 2 - rastrigin_max
 
 parametros, trayectoria = descenso_por_gradiente(
     rastrigin_gradiente,
@@ -51,32 +51,9 @@ ax_rastrigin = crear_heatmap(
 
 crear_animacion(ax_rastrigin, rastrigin, trayectoria, "rastrigin")
 
-# Three hump camel 2D
-camel_max = 2
-parametros_iniciales = np.random.random(2) * camel_max * 2 - camel_max
-
-iteraciones = 1000
-
-parametros, trayectoria = descenso_por_gradiente(
-    three_hump_camel_gradiente,
-    parametros_iniciales,
-    iteraciones,
-    tasa_de_aprendizaje
-)
-
-ax_three = crear_heatmap(
-    three_hump_camel,
-    cantidad_puntos=2000,
-    min_x=-camel_max,
-    max_x=camel_max,
-    min_y=-camel_max,
-    max_y=camel_max
-)
-
-crear_animacion(ax_three, three_hump_camel, trayectoria, "three_hump_camel")
 
 # Rastrigin 3D (f: R³ → R)
-parametros_iniciales_3d = np.random.random(3) * rastrigin_max * 2 - rastrigin_max
+parametros_iniciales_3d = rng.random(3) * rastrigin_max * 2 - rastrigin_max
 
 parametros_3d, trayectoria_3d = descenso_por_gradiente(
     rastrigin_gradiente,
@@ -99,7 +76,7 @@ crear_animacion_3d(ax_rastrigin_3d, rastrigin, trayectoria_3d, "rastrigin_3d")
 
 # Rosenbrock 2D
 rosenbrock_max = 2
-parametros_iniciales_rosen = np.random.random(2) * rosenbrock_max * 2 - rosenbrock_max
+parametros_iniciales_rosen = rng.random(2) * rosenbrock_max * 2 - rosenbrock_max
 
 parametros_rosen, trayectoria_rosen = descenso_por_gradiente(
     rosenbrock_gradiente,
@@ -121,7 +98,7 @@ crear_animacion(ax_rosen, rosenbrock, trayectoria_rosen, "rosenbrock")
 
 
 # Rosenbrock 3D (f: R³ → R)
-parametros_iniciales_rosen_3d = np.random.random(3) * rosenbrock_max * 2 - rosenbrock_max
+parametros_iniciales_rosen_3d = rng.random(3) * rosenbrock_max * 2 - rosenbrock_max
 
 parametros_rosen_3d, trayectoria_rosen_3d = descenso_por_gradiente(
     rosenbrock_gradiente,

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+random_seed = 1234567890
 
 def rastrigin(parametros: np.ndarray, A=10) -> float:
     parametros_copy = parametros.copy()
