@@ -11,13 +11,10 @@ from funciones import (
 
 rng = np.random.default_rng(random_seed)
 
-# ─────────────────────────────────────────────
-#  ALGORITMO EVOLUTIVO (Estrategia Evolutiva)
-# ─────────────────────────────────────────────
 def algoritmo_evolutivo(
     funcion_objetivo,
     bounds,
-    punto_inicial,          # ← nuevo parámetro
+    punto_inicial,
     iteraciones=100,
     tamanio_poblacion=50,
     tasa_mutacion=0.1,
@@ -28,7 +25,6 @@ def algoritmo_evolutivo(
     limites_min = np.array([b[0] for b in bounds])
     limites_max = np.array([b[1] for b in bounds])
 
-    # ── Inicialización: el individuo 0 ES el punto_inicial del GD ────────
     poblacion = limites_min + np.random.random((tamanio_poblacion, dimensiones)) * (
         limites_max - limites_min
     )
