@@ -85,46 +85,51 @@ def crear_heatmap(f, cantidad_puntos: int = 200,
 def crear_animacion(ax, f, trayectoria, nombre=''):
     """
     Animates a gradient-descent trajectory in 2D input space for f: R² → R.
-
-    The two spatial axes represent the two input variables (x, y).
-    The current point and its trail are drawn over the heatmap produced by
-    crear_heatmap.
-
-    Parameters:
-        ax          : the 2D Axes returned by crear_heatmap
-        f           : the objective function f: R² → R
-        trayectoria : list/array of 2D points (N × 2) visited during optimization
-        nombre      : name for the output GIF file
     """
     import matplotlib.animation as animation
+    import numpy as np
 
     fig = ax.figure
     trayectoria = np.array(trayectoria)  # shape: (N, 2)
 
-    # Compute the function value at every trajectory point (for coloring)
+    # Compute the function value at every trajectory point
     f_values = np.array([f(p) for p in trayectoria])
 
     # Current-point marker and trail line
     punto, = ax.plot([], [], 'ro', markersize=8, zorder=5)
     linea, = ax.plot([], [], 'r-', linewidth=1.5, alpha=0.8, zorder=4)
 
+    texto_info = ax.text(
+        0.02, 0.95, '',
+        transform=ax.transAxes,
+        fontsize=12,
+        verticalalignment='top',
+        bbox=dict(boxstyle='round', facecolor='white', alpha=0.7)
+    )
+
     def init():
         punto.set_data([], [])
         linea.set_data([], [])
-        return punto, linea
+        texto_info.set_text('')
+        return punto, linea, texto_info
 
     def update(frame):
-        # Current point in input space (x, y)
-        punto.set_data(
-            [trayectoria[frame, 0]],
-            [trayectoria[frame, 1]]
-        )
-        # Trail up to current frame
+        x, y = trayectoria[frame]
+        valor = f_values[frame]
+
+        punto.set_data([x], [y])
+
         linea.set_data(
             trayectoria[:frame + 1, 0],
             trayectoria[:frame + 1, 1]
         )
-        return punto, linea
+
+        texto_info.set_text(
+            f'Iteración: {frame + 1}\n'
+            f'f(x,y): {valor:.4f}'
+        )
+
+        return punto, linea, texto_info
 
     ani = animation.FuncAnimation(
         fig, update,
@@ -192,56 +197,60 @@ def heatmap_3d(f, cantidad_puntos: int = 30,
 def crear_animacion_3d(ax, f, trayectoria, nombre=''):
     """
     Animates a gradient-descent trajectory in 3D input space for f: R³ → R.
-
-    The three spatial axes represent the three input variables (x, y, z).
-    The current point and its trail are colored by the function value at
-    each step, and the camera rotates slowly for a dynamic view.
-
-    Parameters:
-        ax          : the 3D Axes returned by heatmap_3d
-        f           : the objective function f: R³ → R
-        trayectoria : list/array of 3D points (N × 3) visited during optimization
-        nombre      : name for the output GIF file
     """
     import matplotlib.animation as animation
+    import numpy as np
 
     fig = ax.figure
     trayectoria = np.array(trayectoria)  # shape: (N, 3)
 
-    # Compute the function value at every trajectory point (for coloring)
+    # Compute the function value at every trajectory point
     f_values = np.array([f(p) for p in trayectoria])
 
     # Current-point marker and trail line
     punto, = ax.plot([], [], [], 'ro', markersize=8, zorder=5)
     linea, = ax.plot([], [], [], 'r-', linewidth=1.5, alpha=0.8, zorder=4)
 
+    texto_info = ax.text2D(
+        0.02, 0.95, '',
+        transform=ax.transAxes,
+        fontsize=12,
+        verticalalignment='top',
+        bbox=dict(boxstyle='round', facecolor='white', alpha=0.7)
+    )
+
     def init():
         punto.set_data_3d([], [], [])
         linea.set_data_3d([], [], [])
-        return punto, linea
+        texto_info.set_text('')
+        return punto, linea, texto_info
 
     def update(frame):
-        # Current point in input space (x, y, z)
-        punto.set_data_3d(
-            [trayectoria[frame, 0]],
-            [trayectoria[frame, 1]],
-            [trayectoria[frame, 2]]
-        )
-        # Trail up to current frame
+        x, y, z = trayectoria[frame]
+        valor = f_values[frame]
+
+        punto.set_data_3d([x], [y], [z])
+
         linea.set_data_3d(
             trayectoria[:frame + 1, 0],
             trayectoria[:frame + 1, 1],
             trayectoria[:frame + 1, 2]
         )
-        # Slowly rotate the camera
-        ax.view_init(elev=30, azim=45 + frame * 270 / len(trayectoria))
-        return punto, linea
+
+        texto_info.set_text(
+            f'Iteración: {frame + 1}\n'
+            f'f(x,y,z): {valor:.4f}'
+        )
+
+        ax.view_init(elev=30, azim=45 + frame * 90 / len(trayectoria))
+
+        return punto, linea, texto_info
 
     ani = animation.FuncAnimation(
         fig, update,
         frames=len(trayectoria),
         init_func=init,
-        blit=False,   # 3D axes don't support blitting
+        blit=False,
         interval=50
     )
 
