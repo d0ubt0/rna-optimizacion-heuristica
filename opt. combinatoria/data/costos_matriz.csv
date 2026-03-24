@@ -1,0 +1,1025 @@
+origin_idx,dest_idx,origin_capital,dest_capital,distance_km,time_h,tolls_mxn
+0,0,Aguascalientes,Aguascalientes,0.0,0.0,0.0
+0,1,Aguascalientes,Mexicali,2527.335,34.386,2122.96
+0,2,Aguascalientes,La Paz,1263.369,17.794,1010.7
+0,3,Aguascalientes,San Francisco de Campeche,1877.741,27.412,1427.08
+0,4,Aguascalientes,Saltillo,643.242,9.746,463.13
+0,5,Aguascalientes,Colima,451.28,7.107,306.87
+0,6,Aguascalientes,Tuxtla Gutierrez,1575.35,20.728,1008.22
+0,7,Aguascalientes,Chihuahua,1216.153,16.546,1045.89
+0,8,Aguascalientes,Ciudad de Mexico,634.031,8.93,519.91
+0,9,Aguascalientes,Durango,517.006,7.548,403.26
+0,10,Aguascalientes,Guanajuato,193.529,2.932,143.21
+0,11,Aguascalientes,Chilpancingo,778.962,12.267,545.27
+0,12,Aguascalientes,Pachuca,592.365,7.794,390.96
+0,13,Aguascalientes,Guadalajara,255.214,3.472,158.23
+0,14,Aguascalientes,Toluca,597.211,8.411,501.66
+0,15,Aguascalientes,Morelia,411.557,6.008,329.25
+0,16,Aguascalientes,Cuernavaca,622.864,9.437,473.38
+0,17,Aguascalientes,Tepic,379.847,5.982,273.49
+0,18,Aguascalientes,Monterrey,670.953,8.828,456.25
+0,19,Aguascalientes,Oaxaca de Juarez,1164.965,15.85,745.58
+0,20,Aguascalientes,Puebla,800.78,11.279,688.67
+0,21,Aguascalientes,Santiago de Queretaro,378.201,5.521,310.12
+0,22,Aguascalientes,Chetumal,2064.794,31.285,1610.54
+0,23,Aguascalientes,San Luis Potosi,194.264,3.059,143.76
+0,24,Aguascalientes,Culiacan,888.0,11.684,621.6
+0,25,Aguascalientes,Hermosillo,1752.596,23.845,1156.71
+0,26,Aguascalientes,Villahermosa,1626.993,22.915,1008.74
+0,27,Aguascalientes,Ciudad Victoria,514.683,7.514,432.33
+0,28,Aguascalientes,Tlaxcala,704.222,10.67,563.38
+0,29,Aguascalientes,Xalapa,876.949,13.81,666.48
+0,30,Aguascalientes,Merida,1923.299,25.307,1384.78
+0,31,Aguascalientes,Zacatecas,154.164,2.097,104.83
+1,0,Mexicali,Aguascalientes,2617.597,35.614,1884.67
+1,1,Mexicali,Mexicali,0.0,0.0,0.0
+1,2,Mexicali,La Paz,1463.236,21.361,936.47
+1,3,Mexicali,San Francisco de Campeche,4053.009,61.409,3485.59
+1,4,Mexicali,Saltillo,2377.583,37.442,1949.62
+1,5,Mexicali,Colima,2881.022,37.908,2247.2
+1,6,Mexicali,Tuxtla Gutierrez,3871.7,52.676,2865.06
+1,7,Mexicali,Chihuahua,1409.343,19.85,986.54
+1,8,Mexicali,Ciudad de Mexico,3192.521,46.606,2107.06
+1,9,Mexicali,Durango,2150.082,32.577,1333.05
+1,10,Mexicali,Guanajuato,2562.547,40.355,2152.54
+1,11,Mexicali,Chilpancingo,3230.684,42.509,2584.55
+1,12,Mexicali,Pachuca,3129.765,42.582,2378.62
+1,13,Mexicali,Guadalajara,2681.747,37.771,1930.86
+1,14,Mexicali,Toluca,3348.022,48.876,2276.65
+1,15,Mexicali,Morelia,2789.498,42.265,1785.28
+1,16,Mexicali,Cuernavaca,3185.454,50.165,2739.49
+1,17,Mexicali,Tepic,2401.106,31.593,1968.91
+1,18,Mexicali,Monterrey,2545.974,34.639,1985.86
+1,19,Mexicali,Oaxaca de Juarez,3496.722,49.25,2587.57
+1,20,Mexicali,Puebla,3249.973,47.445,2274.98
+1,21,Mexicali,Santiago de Queretaro,2950.053,44.698,1947.04
+1,22,Mexicali,Chetumal,4767.638,75.081,2955.94
+1,23,Mexicali,San Luis Potosi,2495.3,32.833,2096.05
+1,24,Mexicali,Culiacan,1648.44,22.428,1318.75
+1,25,Mexicali,Hermosillo,850.932,11.985,646.71
+1,26,Mexicali,Villahermosa,4193.13,61.214,3019.05
+1,27,Mexicali,Ciudad Victoria,2521.262,38.201,1714.46
+1,28,Mexicali,Tlaxcala,3158.209,49.736,2021.25
+1,29,Mexicali,Xalapa,3396.171,44.686,2920.71
+1,30,Mexicali,Merida,4289.691,58.363,3517.55
+1,31,Mexicali,Zacatecas,2590.291,36.483,2020.43
+2,0,La Paz,Aguascalientes,1164.497,16.401,954.89
+2,1,La Paz,Mexicali,1517.936,22.16,1183.99
+2,2,La Paz,La Paz,0.0,0.0,0.0
+2,3,La Paz,San Francisco de Campeche,3242.272,51.059,2269.59
+2,4,La Paz,Saltillo,1327.087,17.462,875.88
+2,5,La Paz,Colima,1271.751,17.303,788.49
+2,6,La Paz,Tuxtla Gutierrez,2998.961,42.239,2519.13
+2,7,La Paz,Chihuahua,895.816,13.078,716.65
+2,8,La Paz,Ciudad de Mexico,1816.229,27.519,1380.33
+2,9,La Paz,Durango,860.571,13.552,619.61
+2,10,La Paz,Guanajuato,1333.497,17.546,906.78
+2,11,La Paz,Chilpancingo,1887.474,25.68,1207.98
+2,12,La Paz,Pachuca,1871.712,26.362,1609.67
+2,13,La Paz,Guadalajara,1249.826,18.246,1024.86
+2,14,La Paz,Toluca,1694.529,25.675,1321.73
+2,15,La Paz,Morelia,1535.746,24.185,1136.45
+2,16,La Paz,Cuernavaca,1940.669,25.535,1358.47
+2,17,La Paz,Tepic,851.997,11.592,562.32
+2,18,La Paz,Monterrey,1452.591,20.459,900.61
+2,19,La Paz,Oaxaca de Juarez,2399.994,35.036,2015.99
+2,20,La Paz,Puebla,2127.144,32.229,1701.72
+2,21,La Paz,Santiago de Queretaro,1526.094,24.033,1159.83
+2,22,La Paz,Chetumal,3446.922,45.354,2481.78
+2,23,La Paz,San Luis Potosi,1490.673,20.281,1013.66
+2,24,La Paz,Culiacan,417.094,5.875,266.94
+2,25,La Paz,Hermosillo,791.255,11.551,680.48
+2,26,La Paz,Villahermosa,2883.471,43.689,2364.45
+2,27,La Paz,Ciudad Victoria,1526.737,24.043,1190.86
+2,28,La Paz,Tlaxcala,1910.517,25.138,1413.78
+2,29,La Paz,Xalapa,2169.535,29.517,1518.67
+2,30,La Paz,Merida,3309.676,46.615,2184.39
+2,31,La Paz,Zacatecas,1110.012,16.205,688.21
+3,0,San Francisco de Campeche,Aguascalientes,1798.176,26.251,1186.8
+3,1,San Francisco de Campeche,Mexicali,4345.118,65.835,2693.97
+3,2,San Francisco de Campeche,La Paz,2893.928,45.574,2430.9
+3,3,San Francisco de Campeche,San Francisco de Campeche,0.0,0.0,0.0
+3,4,San Francisco de Campeche,Saltillo,1905.07,25.919,1447.85
+3,5,San Francisco de Campeche,Colima,1931.774,27.208,1390.88
+3,6,San Francisco de Campeche,Tuxtla Gutierrez,646.972,9.445,439.94
+3,7,San Francisco de Campeche,Chihuahua,2867.878,43.453,1835.44
+3,8,San Francisco de Campeche,Ciudad de Mexico,1270.988,20.016,1093.05
+3,9,San Francisco de Campeche,Durango,2269.992,29.868,1861.39
+3,10,San Francisco de Campeche,Guanajuato,1513.062,20.586,1180.19
+3,11,San Francisco de Campeche,Chilpancingo,1391.095,19.593,1029.41
+3,12,San Francisco de Campeche,Pachuca,1289.462,18.824,902.62
+3,13,San Francisco de Campeche,Guadalajara,1819.056,27.561,1200.58
+3,14,San Francisco de Campeche,Toluca,1374.41,21.644,852.13
+3,15,San Francisco de Campeche,Morelia,1686.235,22.187,1416.44
+3,16,San Francisco de Campeche,Cuernavaca,1257.201,17.105,1005.76
+3,17,San Francisco de Campeche,Tepic,2178.02,30.676,1655.3
+3,18,San Francisco de Campeche,Monterrey,1820.378,26.575,1310.67
+3,19,San Francisco de Campeche,Oaxaca de Juarez,999.589,15.145,679.72
+3,20,San Francisco de Campeche,Puebla,1182.513,18.622,756.81
+3,21,San Francisco de Campeche,Santiago de Queretaro,1586.099,20.87,1364.04
+3,22,San Francisco de Campeche,Chetumal,387.411,5.271,317.68
+3,23,San Francisco de Campeche,San Luis Potosi,1642.333,23.131,1281.02
+3,24,San Francisco de Campeche,Culiacan,2817.678,41.134,2085.08
+3,25,San Francisco de Campeche,Hermosillo,3243.54,49.145,2270.48
+3,26,San Francisco de Campeche,Villahermosa,486.943,7.668,321.38
+3,27,San Francisco de Campeche,Ciudad Victoria,1329.288,17.491,824.16
+3,28,San Francisco de Campeche,Tlaxcala,1151.564,15.668,967.31
+3,29,San Francisco de Campeche,Xalapa,1002.467,14.119,801.97
+3,30,San Francisco de Campeche,Merida,214.512,3.132,163.03
+3,31,San Francisco de Campeche,Zacatecas,1849.989,28.03,1331.99
+4,0,Saltillo,Aguascalientes,637.926,9.666,484.82
+4,1,Saltillo,Mexicali,2274.21,35.814,1637.43
+4,2,Saltillo,La Paz,1424.488,18.743,968.65
+4,3,Saltillo,San Francisco de Campeche,1698.687,23.111,1087.16
+4,4,Saltillo,Saltillo,0.0,0.0,0.0
+4,5,Saltillo,Colima,1150.128,16.79,943.1
+4,6,Saltillo,Tuxtla Gutierrez,1795.372,27.203,1400.39
+4,7,Saltillo,Chihuahua,930.463,14.653,688.54
+4,8,Saltillo,Ciudad de Mexico,958.577,12.613,671.0
+4,9,Saltillo,Durango,590.019,8.027,389.41
+4,10,Saltillo,Guanajuato,659.694,9.291,409.01
+4,11,Saltillo,Chilpancingo,1274.763,18.61,1070.8
+4,12,Saltillo,Pachuca,967.196,14.654,773.76
+4,13,Saltillo,Guadalajara,812.27,12.792,617.33
+4,14,Saltillo,Toluca,1034.796,13.616,745.05
+4,15,Saltillo,Morelia,863.671,11.751,587.3
+4,16,Saltillo,Cuernavaca,1078.611,15.192,690.31
+4,17,Saltillo,Tepic,906.511,13.234,779.6
+4,18,Saltillo,Monterrey,104.219,1.579,85.46
+4,19,Saltillo,Oaxaca de Juarez,1540.412,24.258,1201.52
+4,20,Saltillo,Puebla,1048.814,13.8,776.12
+4,21,Saltillo,Santiago de Queretaro,790.164,10.751,553.11
+4,22,Saltillo,Chetumal,2351.004,33.113,1551.66
+4,23,Saltillo,San Luis Potosi,516.647,7.542,320.32
+4,24,Saltillo,Culiacan,978.43,14.825,821.88
+4,25,Saltillo,Hermosillo,1471.327,23.17,1177.06
+4,26,Saltillo,Villahermosa,1725.172,22.7,1311.13
+4,27,Saltillo,Ciudad Victoria,356.749,4.854,256.86
+4,28,Saltillo,Tlaxcala,1055.566,14.867,717.78
+4,29,Saltillo,Xalapa,1183.626,17.279,757.52
+4,30,Saltillo,Merida,1766.088,26.759,1518.84
+4,31,Saltillo,Zacatecas,499.511,7.866,409.6
+5,0,Colima,Aguascalientes,463.933,7.306,398.98
+5,1,Colima,Mexicali,2856.811,37.59,2342.59
+5,2,Colima,La Paz,1215.972,16.544,948.46
+5,3,Colima,San Francisco de Campeche,2073.556,29.205,1534.43
+5,4,Colima,Saltillo,1026.56,14.986,718.59
+5,5,Colima,Colima,0.0,0.0,0.0
+5,6,Colima,Tuxtla Gutierrez,1582.42,24.92,981.1
+5,7,Colima,Chihuahua,1576.24,20.74,1324.04
+5,8,Colima,Ciudad de Mexico,654.281,8.902,523.42
+5,9,Colima,Durango,788.807,11.11,599.49
+5,10,Colima,Guanajuato,436.223,6.368,314.08
+5,11,Colima,Chilpancingo,699.721,10.602,475.81
+5,12,Colima,Pachuca,818.705,12.893,523.97
+5,13,Colima,Guadalajara,232.688,3.062,200.11
+5,14,Colima,Toluca,656.126,8.927,538.02
+5,15,Colima,Morelia,383.974,5.408,299.5
+5,16,Colima,Cuernavaca,722.833,10.552,534.9
+5,17,Colima,Tepic,393.393,5.96,275.37
+5,18,Colima,Monterrey,1204.366,18.966,794.88
+5,19,Colima,Oaxaca de Juarez,1085.063,14.277,672.74
+5,20,Colima,Puebla,868.82,11.821,729.81
+5,21,Colima,Santiago de Queretaro,524.476,7.387,419.58
+5,22,Colima,Chetumal,2412.745,35.223,1833.69
+5,23,Colima,San Luis Potosi,590.843,8.952,425.41
+5,24,Colima,Culiacan,1067.461,16.81,725.87
+5,25,Colima,Hermosillo,1784.908,23.486,1142.34
+5,26,Colima,Villahermosa,1669.361,22.712,1435.65
+5,27,Colima,Ciudad Victoria,925.717,13.038,759.09
+5,28,Colima,Tlaxcala,832.679,12.156,649.49
+5,29,Colima,Xalapa,1108.179,16.791,820.05
+5,30,Colima,Merida,2132.585,33.584,1492.81
+5,31,Colima,Zacatecas,629.39,8.281,415.4
+6,0,Tuxtla Gutierrez,Aguascalientes,1675.6,22.047,1172.92
+6,1,Tuxtla Gutierrez,Mexicali,3981.276,54.167,2627.64
+6,2,Tuxtla Gutierrez,La Paz,2973.76,41.884,1843.73
+6,3,Tuxtla Gutierrez,San Francisco de Campeche,618.842,9.034,519.83
+6,4,Tuxtla Gutierrez,Saltillo,1924.768,29.163,1539.81
+6,5,Tuxtla Gutierrez,Colima,1641.576,25.852,1247.6
+6,6,Tuxtla Gutierrez,Tuxtla Gutierrez,0.0,0.0,0.0
+6,7,Tuxtla Gutierrez,Chihuahua,2682.169,36.492,1823.87
+6,8,Tuxtla Gutierrez,Ciudad de Mexico,1087.735,15.32,696.15
+6,9,Tuxtla Gutierrez,Durango,2094.657,30.579,1801.4
+6,10,Tuxtla Gutierrez,Guanajuato,1315.646,19.934,1078.83
+6,11,Tuxtla Gutierrez,Chilpancingo,998.285,15.721,778.66
+6,12,Tuxtla Gutierrez,Pachuca,952.617,12.534,704.94
+6,13,Tuxtla Gutierrez,Guadalajara,1710.062,23.266,1197.04
+6,14,Tuxtla Gutierrez,Toluca,1022.402,14.4,674.79
+6,15,Tuxtla Gutierrez,Morelia,1357.106,19.812,841.41
+6,16,Tuxtla Gutierrez,Cuernavaca,953.685,14.45,801.1
+6,17,Tuxtla Gutierrez,Tepic,2014.081,31.718,1611.26
+6,18,Tuxtla Gutierrez,Monterrey,1732.732,22.799,1316.88
+6,19,Tuxtla Gutierrez,Oaxaca de Juarez,582.669,7.927,419.52
+6,20,Tuxtla Gutierrez,Puebla,838.751,11.813,570.35
+6,21,Tuxtla Gutierrez,Santiago de Queretaro,1335.586,19.498,854.78
+6,22,Tuxtla Gutierrez,Chetumal,776.476,11.765,667.77
+6,23,Tuxtla Gutierrez,San Luis Potosi,1567.292,24.682,1285.18
+6,24,Tuxtla Gutierrez,Culiacan,2482.822,32.669,1936.6
+6,25,Tuxtla Gutierrez,Hermosillo,3529.011,48.014,2611.47
+6,26,Tuxtla Gutierrez,Villahermosa,200.767,2.828,140.54
+6,27,Tuxtla Gutierrez,Ciudad Victoria,1342.441,19.598,886.01
+6,28,Tuxtla Gutierrez,Tlaxcala,893.169,13.533,553.76
+6,29,Tuxtla Gutierrez,Xalapa,687.936,10.834,577.87
+6,30,Tuxtla Gutierrez,Merida,879.658,11.574,703.73
+6,31,Tuxtla Gutierrez,Zacatecas,1636.647,22.267,1243.85
+7,0,Chihuahua,Aguascalientes,1151.578,15.668,921.26
+7,1,Chihuahua,Mexicali,1499.028,21.113,1139.26
+7,2,Chihuahua,La Paz,920.932,13.444,663.07
+7,3,Chihuahua,San Francisco de Campeche,2844.176,43.094,1934.04
+7,4,Chihuahua,Saltillo,891.037,14.032,570.26
+7,5,Chihuahua,Colima,1452.882,19.117,1249.48
+7,6,Chihuahua,Tuxtla Gutierrez,2777.96,37.795,2277.93
+7,7,Chihuahua,Chihuahua,0.0,0.0,0.0
+7,8,Chihuahua,Ciudad de Mexico,1890.813,27.603,1399.2
+7,9,Chihuahua,Durango,761.447,11.537,533.01
+7,10,Chihuahua,Guanajuato,1311.335,20.651,865.48
+7,11,Chihuahua,Chilpancingo,2064.713,27.167,1280.12
+7,12,Chihuahua,Pachuca,1662.613,22.621,1396.59
+7,13,Chihuahua,Guadalajara,1401.796,19.744,1121.44
+7,14,Chihuahua,Toluca,1742.507,25.438,1324.3
+7,15,Chihuahua,Morelia,1717.217,26.018,1236.4
+7,16,Chihuahua,Cuernavaca,1873.809,29.509,1274.19
+7,17,Chihuahua,Tepic,1097.645,14.443,702.49
+7,18,Chihuahua,Monterrey,983.297,13.378,845.63
+7,19,Chihuahua,Oaxaca de Juarez,2254.353,31.751,1848.57
+7,20,Chihuahua,Puebla,2046.134,29.871,1595.98
+7,21,Chihuahua,Santiago de Queretaro,1536.701,23.283,1137.16
+7,22,Chihuahua,Chetumal,2888.761,45.492,2022.13
+7,23,Chihuahua,San Luis Potosi,1310.392,17.242,864.86
+7,24,Chihuahua,Culiacan,620.963,8.448,385.0
+7,25,Chihuahua,Hermosillo,728.706,10.263,612.11
+7,26,Chihuahua,Villahermosa,2559.219,37.361,2047.38
+7,27,Chihuahua,Ciudad Victoria,1182.157,17.911,898.44
+7,28,Chihuahua,Tlaxcala,1921.545,30.261,1383.51
+7,29,Chihuahua,Xalapa,1896.779,24.958,1289.81
+7,30,Chihuahua,Merida,2818.586,38.348,1803.9
+7,31,Chihuahua,Zacatecas,1050.502,14.796,903.43
+8,0,Ciudad de Mexico,Aguascalientes,623.099,8.776,398.78
+8,1,Ciudad de Mexico,Mexicali,3024.493,44.153,2601.06
+8,2,Ciudad de Mexico,La Paz,1929.743,29.239,1582.39
+8,3,Ciudad de Mexico,San Francisco de Campeche,1305.652,20.561,1018.41
+8,4,Ciudad de Mexico,Saltillo,949.701,12.496,702.78
+8,5,Ciudad de Mexico,Colima,728.351,9.91,509.85
+8,6,Ciudad de Mexico,Tuxtla Gutierrez,1006.829,14.181,664.51
+8,7,Ciudad de Mexico,Chihuahua,1684.253,24.588,1044.24
+8,8,Ciudad de Mexico,Ciudad de Mexico,0.0,0.0,0.0
+8,9,Ciudad de Mexico,Durango,1087.523,17.126,870.02
+8,10,Ciudad de Mexico,Guanajuato,380.696,5.009,289.33
+8,11,Ciudad de Mexico,Chilpancingo,315.856,4.297,227.42
+8,12,Ciudad de Mexico,Pachuca,118.289,1.666,80.44
+8,13,Ciudad de Mexico,Guadalajara,714.101,10.425,457.02
+8,14,Ciudad de Mexico,Toluca,84.34,1.278,72.53
+8,15,Ciudad de Mexico,Morelia,304.192,4.79,249.44
+8,16,Ciudad de Mexico,Cuernavaca,87.996,1.158,68.64
+8,17,Ciudad de Mexico,Tepic,937.982,12.762,694.11
+8,18,Ciudad de Mexico,Monterrey,975.872,13.745,683.11
+8,19,Ciudad de Mexico,Oaxaca de Juarez,556.337,8.122,367.18
+8,20,Ciudad de Mexico,Puebla,154.194,2.336,95.6
+8,21,Ciudad de Mexico,Santiago de Queretaro,251.679,3.963,211.41
+8,22,Ciudad de Mexico,Chetumal,1728.077,22.738,1382.46
+8,23,Ciudad de Mexico,San Luis Potosi,514.508,7.0,391.03
+8,24,Ciudad de Mexico,Culiacan,1410.385,19.865,1015.48
+8,25,Ciudad de Mexico,Hermosillo,2405.219,35.113,1635.55
+8,26,Ciudad de Mexico,Villahermosa,953.191,14.442,610.04
+8,27,Ciudad de Mexico,Ciudad Victoria,643.261,10.13,553.2
+8,28,Ciudad de Mexico,Tlaxcala,140.431,1.848,115.15
+8,29,Ciudad de Mexico,Xalapa,328.559,4.47,256.28
+8,30,Ciudad de Mexico,Merida,1564.226,22.031,1157.53
+8,31,Ciudad de Mexico,Zacatecas,758.936,11.079,531.26
+9,0,Durango,Aguascalientes,525.695,7.674,389.01
+9,1,Durango,Mexicali,2113.64,32.025,1479.55
+9,2,Durango,La Paz,816.439,12.857,538.85
+9,3,Durango,San Francisco de Campeche,2074.303,27.293,1286.07
+9,4,Durango,Saltillo,605.41,8.237,508.54
+9,5,Durango,Colima,781.888,11.013,625.51
+9,6,Durango,Tuxtla Gutierrez,2001.973,29.226,1521.5
+9,7,Durango,Chihuahua,815.836,12.361,587.4
+9,8,Durango,Ciudad de Mexico,1126.713,17.744,766.16
+9,9,Durango,Durango,0.0,0.0,0.0
+9,10,Durango,Guanajuato,649.494,8.837,558.56
+9,11,Durango,Chilpancingo,1343.69,18.925,1101.83
+9,12,Durango,Pachuca,1072.139,15.652,836.27
+9,13,Durango,Guadalajara,544.785,8.254,403.14
+9,14,Durango,Toluca,1124.38,17.707,787.07
+9,15,Durango,Morelia,873.536,11.494,576.53
+9,16,Durango,Cuernavaca,1114.049,15.157,690.71
+9,17,Durango,Tepic,436.281,6.145,366.48
+9,18,Durango,Monterrey,705.037,10.293,564.03
+9,19,Durango,Oaxaca de Juarez,1606.077,24.334,1220.62
+9,20,Durango,Puebla,1176.292,18.524,846.93
+9,21,Durango,Santiago de Queretaro,878.724,11.562,597.53
+9,22,Durango,Chetumal,2605.514,35.449,1667.53
+9,23,Durango,San Luis Potosi,592.992,8.352,509.97
+9,24,Durango,Culiacan,446.637,6.52,366.24
+9,25,Durango,Hermosillo,1237.905,18.756,965.57
+9,26,Durango,Villahermosa,1953.324,30.761,1445.46
+9,27,Durango,Ciudad Victoria,754.434,9.927,528.1
+9,28,Durango,Tlaxcala,1264.953,17.21,834.87
+9,29,Durango,Xalapa,1350.292,19.018,837.18
+9,30,Durango,Merida,2168.46,31.656,1821.51
+9,31,Durango,Zacatecas,385.795,5.845,308.64
+10,0,Guanajuato,Aguascalientes,204.587,3.1,171.85
+10,1,Guanajuato,Mexicali,2611.358,41.124,2089.09
+10,2,Guanajuato,La Paz,1523.996,20.053,1158.24
+10,3,Guanajuato,San Francisco de Campeche,1671.573,22.742,1203.53
+10,4,Guanajuato,Saltillo,703.674,9.911,478.5
+10,5,Guanajuato,Colima,448.687,6.55,287.16
+10,6,Guanajuato,Tuxtla Gutierrez,1516.126,22.972,1303.87
+10,7,Guanajuato,Chihuahua,1461.202,23.011,1198.19
+10,8,Guanajuato,Ciudad de Mexico,409.702,5.391,319.57
+10,9,Guanajuato,Durango,674.237,9.173,498.94
+10,10,Guanajuato,Guanajuato,0.0,0.0,0.0
+10,11,Guanajuato,Chilpancingo,645.502,9.423,426.03
+10,12,Guanajuato,Pachuca,407.71,6.177,252.78
+10,13,Guanajuato,Guadalajara,311.254,4.902,261.45
+10,14,Guanajuato,Toluca,346.534,4.56,277.23
+10,15,Guanajuato,Morelia,222.783,3.031,169.31
+10,16,Guanajuato,Cuernavaca,464.357,6.54,334.34
+10,17,Guanajuato,Tepic,540.958,7.897,367.85
+10,18,Guanajuato,Monterrey,722.911,10.953,462.66
+10,19,Guanajuato,Oaxaca de Juarez,994.443,15.661,855.22
+10,20,Guanajuato,Puebla,574.963,7.565,471.47
+10,21,Guanajuato,Santiago de Queretaro,146.335,1.991,114.14
+10,22,Guanajuato,Chetumal,1913.949,26.957,1416.32
+10,23,Guanajuato,San Luis Potosi,200.679,2.93,140.48
+10,24,Guanajuato,Culiacan,1133.004,17.167,747.78
+10,25,Guanajuato,Hermosillo,1915.355,30.163,1187.52
+10,26,Guanajuato,Villahermosa,1302.641,17.14,1094.22
+10,27,Guanajuato,Ciudad Victoria,500.486,6.809,400.39
+10,28,Guanajuato,Tlaxcala,555.166,7.819,421.93
+10,29,Guanajuato,Xalapa,703.551,10.271,506.56
+10,30,Guanajuato,Merida,1704.687,25.829,1159.19
+10,31,Guanajuato,Zacatecas,322.955,5.086,206.69
+11,0,Chilpancingo,Aguascalientes,851.089,13.403,578.74
+11,1,Chilpancingo,Mexicali,3408.519,44.849,2181.45
+11,2,Chilpancingo,La Paz,1921.792,26.147,1652.74
+11,3,Chilpancingo,San Francisco de Campeche,1366.03,19.24,1120.14
+11,4,Chilpancingo,Saltillo,1206.472,17.613,941.05
+11,5,Chilpancingo,Colima,743.066,11.259,549.87
+11,6,Chilpancingo,Tuxtla Gutierrez,1024.556,16.135,717.19
+11,7,Chilpancingo,Chihuahua,2046.759,26.931,1350.86
+11,8,Chilpancingo,Ciudad de Mexico,302.241,4.112,187.39
+11,9,Chilpancingo,Durango,1240.33,17.469,1041.88
+11,10,Chilpancingo,Guanajuato,574.388,8.385,459.51
+11,11,Chilpancingo,Chilpancingo,0.0,0.0,0.0
+11,12,Chilpancingo,Pachuca,436.598,6.876,314.35
+11,13,Chilpancingo,Guadalajara,769.371,10.123,523.17
+11,14,Chilpancingo,Toluca,272.003,3.701,174.08
+11,15,Chilpancingo,Morelia,408.988,5.76,351.73
+11,16,Chilpancingo,Cuernavaca,240.769,3.515,197.43
+11,17,Chilpancingo,Tepic,1081.308,16.383,843.42
+11,18,Chilpancingo,Monterrey,1337.3,21.06,989.6
+11,19,Chilpancingo,Oaxaca de Juarez,428.992,5.645,300.29
+11,20,Chilpancingo,Puebla,299.613,4.076,197.74
+11,21,Chilpancingo,Santiago de Queretaro,475.451,6.696,294.78
+11,22,Chilpancingo,Chetumal,1826.643,26.666,1534.38
+11,23,Chilpancingo,San Luis Potosi,801.317,12.141,641.05
+11,24,Chilpancingo,Culiacan,1676.256,26.398,1273.95
+11,25,Chilpancingo,Hermosillo,2461.616,32.39,1772.36
+11,26,Chilpancingo,Villahermosa,961.561,13.082,653.86
+11,27,Chilpancingo,Ciudad Victoria,925.747,13.039,592.48
+11,28,Chilpancingo,Tlaxcala,360.696,5.266,310.2
+11,29,Chilpancingo,Xalapa,522.088,7.91,428.11
+11,30,Chilpancingo,Merida,1601.046,25.213,1248.82
+11,31,Chilpancingo,Zacatecas,934.238,12.293,691.34
+12,0,Pachuca,Aguascalientes,576.355,7.584,449.56
+12,1,Pachuca,Mexicali,2935.886,39.944,2172.56
+12,2,Pachuca,La Paz,1969.367,27.738,1378.56
+12,3,Pachuca,San Francisco de Campeche,1311.504,19.146,865.59
+12,4,Pachuca,Saltillo,950.94,14.408,589.58
+12,5,Pachuca,Colima,778.108,12.254,653.61
+12,6,Pachuca,Tuxtla Gutierrez,1015.525,13.362,812.42
+12,7,Pachuca,Chihuahua,1708.796,23.249,1298.69
+12,8,Pachuca,Ciudad de Mexico,117.213,1.651,84.39
+12,9,Pachuca,Durango,1024.276,14.953,696.51
+12,10,Pachuca,Guanajuato,375.522,5.69,240.33
+12,11,Pachuca,Chilpancingo,451.653,7.113,388.42
+12,12,Pachuca,Pachuca,0.0,0.0,0.0
+12,13,Pachuca,Guadalajara,716.392,9.747,558.79
+12,14,Pachuca,Toluca,190.782,2.687,141.18
+12,15,Pachuca,Morelia,370.379,5.407,259.27
+12,16,Pachuca,Cuernavaca,196.492,2.977,129.68
+12,17,Pachuca,Tepic,907.556,14.292,562.68
+12,18,Pachuca,Monterrey,869.989,11.447,730.79
+12,19,Pachuca,Oaxaca de Juarez,618.031,8.409,494.42
+12,20,Pachuca,Puebla,200.014,2.817,152.01
+12,21,Pachuca,Santiago de Queretaro,267.264,3.902,192.43
+12,22,Pachuca,Chetumal,1637.11,24.805,1113.23
+12,23,Pachuca,San Luis Potosi,469.914,7.4,300.75
+12,24,Pachuca,Culiacan,1463.198,19.253,1258.35
+12,25,Pachuca,Hermosillo,2210.453,30.074,1812.57
+12,26,Pachuca,Villahermosa,896.197,12.622,699.03
+12,27,Pachuca,Ciudad Victoria,545.929,7.97,403.99
+12,28,Pachuca,Tlaxcala,158.217,2.397,110.75
+12,29,Pachuca,Xalapa,306.747,4.831,202.45
+12,30,Pachuca,Merida,1424.246,18.74,883.03
+12,31,Pachuca,Zacatecas,721.89,9.822,606.39
+13,0,Guadalajara,Aguascalientes,257.453,3.503,159.62
+13,1,Guadalajara,Mexicali,2612.984,36.803,2194.91
+13,2,Guadalajara,La Paz,1176.92,17.181,941.54
+13,3,Guadalajara,San Francisco de Campeche,1922.022,29.122,1460.74
+13,4,Guadalajara,Saltillo,827.175,13.026,595.57
+13,5,Guadalajara,Colima,228.533,3.007,155.4
+13,6,Guadalajara,Tuxtla Gutierrez,1620.842,22.052,1037.34
+13,7,Guadalajara,Chihuahua,1283.0,18.07,1103.38
+13,8,Guadalajara,Ciudad de Mexico,631.478,9.219,517.81
+13,9,Guadalajara,Durango,539.694,8.177,420.96
+13,10,Guadalajara,Guanajuato,297.106,4.679,219.86
+13,11,Guadalajara,Chilpancingo,823.84,10.84,576.69
+13,12,Guadalajara,Pachuca,741.095,10.083,489.12
+13,13,Guadalajara,Guadalajara,0.0,0.0,0.0
+13,14,Guadalajara,Toluca,627.245,9.157,526.89
+13,15,Guadalajara,Morelia,372.54,5.645,298.03
+13,16,Guadalajara,Cuernavaca,702.34,11.06,533.78
+13,17,Guadalajara,Tepic,273.461,3.598,196.89
+13,18,Guadalajara,Monterrey,932.636,12.689,634.19
+13,19,Guadalajara,Oaxaca de Juarez,1161.1,16.354,743.1
+13,20,Guadalajara,Puebla,813.134,11.871,699.29
+13,21,Guadalajara,Santiago de Queretaro,437.76,6.633,358.96
+13,22,Guadalajara,Chetumal,2245.228,35.358,1751.28
+13,23,Guadalajara,San Luis Potosi,412.923,5.433,305.56
+13,24,Guadalajara,Culiacan,857.53,11.667,600.27
+13,25,Guadalajara,Hermosillo,1656.102,23.325,1093.03
+13,26,Guadalajara,Villahermosa,1534.36,22.399,951.3
+13,27,Guadalajara,Ciudad Victoria,741.921,11.241,623.21
+13,28,Guadalajara,Tlaxcala,858.716,13.523,686.97
+13,29,Guadalajara,Xalapa,1050.175,13.818,798.13
+13,30,Guadalajara,Merida,2177.953,29.632,1568.13
+13,31,Guadalajara,Zacatecas,374.192,5.27,254.45
+14,0,Toluca,Aguascalientes,535.959,7.549,385.89
+14,1,Toluca,Mexicali,2905.308,42.413,1975.61
+14,2,Toluca,La Paz,1647.459,24.961,1054.37
+14,3,Toluca,San Francisco de Campeche,1288.509,20.291,1108.12
+14,4,Toluca,Saltillo,936.669,12.325,768.07
+14,5,Toluca,Colima,574.11,7.811,447.81
+14,6,Toluca,Tuxtla Gutierrez,1003.292,14.131,742.44
+14,7,Toluca,Chihuahua,1648.317,24.063,1153.82
+14,8,Toluca,Ciudad de Mexico,77.006,1.167,50.82
+14,9,Toluca,Durango,992.1,15.624,615.1
+14,10,Toluca,Guanajuato,343.265,4.517,288.34
+14,11,Toluca,Chilpancingo,259.639,3.533,207.71
+14,12,Toluca,Pachuca,175.721,2.475,133.55
+14,13,Toluca,Guadalajara,558.142,8.148,401.86
+14,14,Toluca,Toluca,0.0,0.0,0.0
+14,15,Toluca,Morelia,225.72,3.555,144.46
+14,16,Toluca,Cuernavaca,81.405,1.071,70.01
+14,17,Toluca,Tepic,805.382,10.958,660.41
+14,18,Toluca,Monterrey,961.38,13.541,749.88
+14,19,Toluca,Oaxaca de Juarez,530.999,7.752,392.94
+14,20,Toluca,Puebla,207.772,3.148,145.44
+14,21,Toluca,Santiago de Queretaro,220.781,3.477,145.72
+14,22,Toluca,Chetumal,1610.159,21.186,998.3
+14,23,Toluca,San Luis Potosi,467.98,6.367,393.1
+14,24,Toluca,Culiacan,1352.601,19.051,1082.08
+14,25,Toluca,Hermosillo,2122.188,30.981,1612.86
+14,26,Toluca,Villahermosa,969.325,14.687,697.91
+14,27,Toluca,Ciudad Victoria,669.509,10.543,455.27
+14,28,Toluca,Tlaxcala,199.681,2.627,127.8
+14,29,Toluca,Xalapa,388.936,5.292,334.48
+14,30,Toluca,Merida,1434.059,20.198,1175.93
+14,31,Toluca,Zacatecas,662.159,9.667,516.48
+15,0,Morelia,Aguascalientes,384.12,5.608,314.98
+15,1,Morelia,Mexicali,2918.641,44.222,2276.54
+15,2,Morelia,La Paz,1549.337,24.399,1146.51
+15,3,Morelia,San Francisco de Campeche,1643.365,21.623,1150.36
+15,4,Morelia,Saltillo,945.15,12.859,623.8
+15,5,Morelia,Colima,404.729,5.7,250.93
+15,6,Morelia,Tuxtla Gutierrez,1380.504,20.153,1159.62
+15,7,Morelia,Chihuahua,1688.833,25.588,1351.07
+15,8,Morelia,Ciudad de Mexico,334.89,5.274,254.52
+15,9,Morelia,Durango,927.174,12.2,667.57
+15,10,Morelia,Guanajuato,196.573,2.674,133.67
+15,11,Morelia,Chilpancingo,405.166,5.707,259.31
+15,12,Morelia,Pachuca,353.844,5.166,304.31
+15,13,Morelia,Guadalajara,343.883,5.21,281.98
+15,14,Morelia,Toluca,234.319,3.69,182.77
+15,15,Morelia,Morelia,0.0,0.0,0.0
+15,16,Morelia,Cuernavaca,318.893,4.339,223.22
+15,17,Morelia,Tepic,622.178,8.763,410.64
+15,18,Morelia,Monterrey,970.801,14.172,601.9
+15,19,Morelia,Oaxaca de Juarez,809.536,12.266,680.01
+15,20,Morelia,Puebla,473.958,7.464,379.17
+15,21,Morelia,Santiago de Queretaro,191.9,2.525,145.84
+15,22,Morelia,Chetumal,2038.94,27.741,1468.04
+15,23,Morelia,San Luis Potosi,413.023,5.817,280.86
+15,24,Morelia,Culiacan,1300.309,18.983,832.2
+15,25,Morelia,Hermosillo,2203.762,33.39,1895.24
+15,26,Morelia,Villahermosa,1375.958,21.669,1128.29
+15,27,Morelia,Ciudad Victoria,666.521,8.77,519.89
+15,28,Morelia,Tlaxcala,424.142,5.771,313.86
+15,29,Morelia,Xalapa,614.97,8.662,430.48
+15,30,Morelia,Merida,1682.995,24.569,1110.78
+15,31,Morelia,Zacatecas,516.308,7.823,320.11
+16,0,Cuernavaca,Aguascalientes,699.253,10.595,461.51
+16,1,Cuernavaca,Mexicali,3441.428,54.196,2133.69
+16,2,Cuernavaca,La Paz,1743.312,22.938,1464.38
+16,3,Cuernavaca,San Francisco de Campeche,1268.95,17.265,1015.16
+16,4,Cuernavaca,Saltillo,1049.976,14.788,797.98
+16,5,Cuernavaca,Colima,680.314,9.932,489.83
+16,6,Cuernavaca,Tuxtla Gutierrez,1006.668,15.253,684.53
+16,7,Cuernavaca,Chihuahua,1906.683,30.027,1220.28
+16,8,Cuernavaca,Ciudad de Mexico,86.529,1.139,74.41
+16,9,Cuernavaca,Durango,1226.476,16.687,1005.71
+16,10,Cuernavaca,Guanajuato,423.978,5.972,330.7
+16,11,Cuernavaca,Chilpancingo,212.911,3.108,157.55
+16,12,Cuernavaca,Pachuca,194.706,2.95,136.29
+16,13,Cuernavaca,Guadalajara,672.066,10.584,443.56
+16,14,Cuernavaca,Toluca,87.607,1.153,54.32
+16,15,Cuernavaca,Morelia,330.384,4.495,277.52
+16,16,Cuernavaca,Cuernavaca,0.0,0.0,0.0
+16,17,Cuernavaca,Tepic,1001.839,14.625,761.4
+16,18,Cuernavaca,Monterrey,1177.573,17.842,847.85
+16,19,Cuernavaca,Oaxaca de Juarez,454.017,7.15,308.73
+16,20,Cuernavaca,Puebla,148.688,1.956,95.16
+16,21,Cuernavaca,Santiago de Queretaro,312.331,4.249,268.6
+16,22,Cuernavaca,Chetumal,1650.686,23.249,1353.56
+16,23,Cuernavaca,San Luis Potosi,588.946,8.598,459.38
+16,24,Cuernavaca,Culiacan,1584.18,24.003,1172.29
+16,25,Cuernavaca,Hermosillo,2476.128,38.994,1733.29
+16,26,Cuernavaca,Villahermosa,1028.862,13.538,679.05
+16,27,Cuernavaca,Ciudad Victoria,719.326,9.787,445.98
+16,28,Cuernavaca,Tlaxcala,153.153,2.157,128.65
+16,29,Cuernavaca,Xalapa,351.949,5.138,281.56
+16,30,Cuernavaca,Merida,1465.68,22.207,1113.92
+16,31,Cuernavaca,Zacatecas,798.684,12.578,575.05
+17,0,Tepic,Aguascalientes,379.847,5.982,288.68
+17,1,Tepic,Mexicali,2318.309,30.504,1669.18
+17,2,Tepic,La Paz,924.336,12.576,628.55
+17,3,Tepic,San Francisco de Campeche,2274.392,32.034,1455.61
+17,4,Tepic,Saltillo,914.065,13.344,786.1
+17,5,Tepic,Colima,382.664,5.798,313.78
+17,6,Tepic,Tuxtla Gutierrez,1893.58,29.82,1476.99
+17,7,Tepic,Chihuahua,1159.196,15.253,857.8
+17,8,Tepic,Ciudad de Mexico,954.438,12.986,668.11
+17,9,Tepic,Durango,429.07,6.043,283.19
+17,10,Tepic,Guanajuato,511.717,7.47,317.26
+17,11,Tepic,Chilpancingo,989.671,14.995,831.32
+17,12,Tepic,Pachuca,932.766,14.689,746.21
+17,13,Tepic,Guadalajara,271.083,3.567,206.02
+17,14,Tepic,Toluca,897.425,12.21,646.15
+17,15,Tepic,Morelia,666.62,9.389,453.3
+17,16,Tepic,Cuernavaca,892.395,13.028,571.13
+17,17,Tepic,Tepic,0.0,0.0,0.0
+17,18,Tepic,Monterrey,944.19,14.869,774.24
+17,19,Tepic,Oaxaca de Juarez,1454.981,19.144,1134.89
+17,20,Tepic,Puebla,1131.831,15.399,837.55
+17,21,Tepic,Santiago de Queretaro,740.97,10.436,518.68
+17,22,Tepic,Chetumal,2417.667,35.294,1595.66
+17,23,Tepic,San Luis Potosi,577.216,8.746,357.87
+17,24,Tepic,Culiacan,647.356,10.195,543.78
+17,25,Tepic,Hermosillo,1542.114,20.291,1233.69
+17,26,Tepic,Villahermosa,1994.607,27.138,1515.9
+17,27,Tepic,Ciudad Victoria,860.861,12.125,619.82
+17,28,Tepic,Tlaxcala,1015.913,14.831,690.82
+17,29,Tepic,Xalapa,1221.085,18.501,781.49
+17,30,Tepic,Merida,2314.964,36.456,1990.87
+17,31,Tepic,Zacatecas,414.246,5.451,339.68
+18,0,Monterrey,Aguascalientes,694.916,9.144,597.63
+18,1,Monterrey,Mexicali,2545.974,34.639,2087.7
+18,2,Monterrey,La Paz,1400.245,19.722,1092.19
+18,3,Monterrey,San Francisco de Campeche,1698.0,24.788,1256.52
+18,4,Monterrey,Saltillo,108.956,1.651,76.27
+18,5,Monterrey,Colima,1214.573,19.127,801.62
+18,6,Monterrey,Tuxtla Gutierrez,1685.042,22.172,1044.73
+18,7,Monterrey,Chihuahua,924.467,12.578,776.55
+18,8,Monterrey,Ciudad de Mexico,1030.087,14.508,824.07
+18,9,Monterrey,Durango,717.192,10.47,545.07
+18,10,Monterrey,Guanajuato,709.399,10.748,510.77
+18,11,Monterrey,Chilpancingo,1267.528,19.961,861.92
+18,12,Monterrey,Pachuca,927.441,12.203,593.56
+18,13,Monterrey,Guadalajara,957.18,13.023,823.17
+18,14,Monterrey,Toluca,1107.876,15.604,908.46
+18,15,Monterrey,Morelia,927.846,13.545,723.72
+18,16,Monterrey,Cuernavaca,1089.985,16.515,806.59
+18,17,Monterrey,Tepic,977.911,15.4,684.54
+18,18,Monterrey,Monterrey,0.0,0.0,0.0
+18,19,Monterrey,Oaxaca de Juarez,1406.804,19.14,872.22
+18,20,Monterrey,Puebla,1094.109,15.41,919.05
+18,21,Monterrey,Santiago de Queretaro,834.476,12.182,667.58
+18,22,Monterrey,Chetumal,2243.001,33.985,1704.68
+18,23,Monterrey,San Luis Potosi,540.521,8.512,389.18
+18,24,Monterrey,Culiacan,1011.515,13.309,687.83
+18,25,Monterrey,Hermosillo,1627.649,22.145,1041.7
+18,26,Monterrey,Villahermosa,1728.447,24.344,1486.46
+18,27,Monterrey,Ciudad Victoria,332.176,4.849,272.38
+18,28,Monterrey,Tlaxcala,1032.381,15.642,805.26
+18,29,Monterrey,Xalapa,1109.673,17.475,821.16
+18,30,Monterrey,Merida,1817.369,23.913,1272.16
+18,31,Monterrey,Zacatecas,615.519,8.374,406.24
+19,0,Oaxaca de Juarez,Aguascalientes,1073.794,14.609,751.66
+19,1,Oaxaca de Juarez,Mexicali,3627.441,51.091,2394.11
+19,2,Oaxaca de Juarez,La Paz,2399.994,35.036,1488.0
+19,3,Oaxaca de Juarez,San Francisco de Campeche,1119.91,16.968,940.72
+19,4,Oaxaca de Juarez,Saltillo,1435.084,22.6,1148.07
+19,5,Oaxaca de Juarez,Colima,1134.837,14.932,862.48
+19,6,Oaxaca de Juarez,Tuxtla Gutierrez,587.607,7.995,423.08
+19,7,Oaxaca de Juarez,Chihuahua,2192.871,30.886,1491.15
+19,8,Oaxaca de Juarez,Ciudad de Mexico,523.611,7.644,335.11
+19,9,Oaxaca de Juarez,Durango,1692.892,25.65,1455.89
+19,10,Oaxaca de Juarez,Guanajuato,870.137,13.703,713.51
+19,11,Oaxaca de Juarez,Chilpancingo,421.332,5.544,328.64
+19,12,Oaxaca de Juarez,Pachuca,587.384,7.992,434.66
+19,13,Oaxaca de Juarez,Guadalajara,1233.027,17.367,863.12
+19,14,Oaxaca de Juarez,Toluca,546.17,7.973,360.47
+19,15,Oaxaca de Juarez,Morelia,802.435,12.158,497.51
+19,16,Oaxaca de Juarez,Cuernavaca,505.416,7.959,424.55
+19,17,Oaxaca de Juarez,Tepic,1341.113,17.646,1072.89
+19,18,Oaxaca de Juarez,Monterrey,1459.395,19.856,1109.14
+19,19,Oaxaca de Juarez,Oaxaca de Juarez,0.0,0.0,0.0
+19,20,Oaxaca de Juarez,Puebla,416.614,6.082,283.3
+19,21,Oaxaca de Juarez,Santiago de Queretaro,765.947,11.605,490.21
+19,22,Oaxaca de Juarez,Chetumal,1322.779,20.831,1137.59
+19,23,Oaxaca de Juarez,San Luis Potosi,1096.594,14.429,899.21
+19,24,Oaxaca de Juarez,Culiacan,1919.415,26.114,1497.14
+19,25,Oaxaca de Juarez,Hermosillo,2825.913,39.802,2091.18
+19,26,Oaxaca de Juarez,Villahermosa,619.164,9.039,433.42
+19,27,Oaxaca de Juarez,Ciudad Victoria,1051.634,15.934,694.08
+19,28,Oaxaca de Juarez,Tlaxcala,416.838,6.564,258.44
+19,29,Oaxaca de Juarez,Xalapa,405.39,5.334,340.53
+19,30,Oaxaca de Juarez,Merida,1329.828,18.093,1063.86
+19,31,Oaxaca de Juarez,Zacatecas,1217.593,17.149,925.37
+20,0,Puebla,Aguascalientes,766.848,10.801,613.48
+20,1,Puebla,Mexicali,3484.206,50.864,2648.0
+20,2,Puebla,La Paz,1898.608,28.767,1367.0
+20,3,Puebla,San Francisco de Campeche,1182.513,18.622,804.11
+20,4,Puebla,Saltillo,1176.24,15.477,752.79
+20,5,Puebla,Colima,809.414,11.012,696.1
+20,6,Puebla,Tuxtla Gutierrez,876.876,12.35,719.04
+20,7,Puebla,Chihuahua,2063.185,30.119,1609.28
+20,8,Puebla,Ciudad de Mexico,150.1,2.274,111.07
+20,9,Puebla,Durango,1287.263,20.272,901.08
+20,10,Puebla,Guanajuato,520.44,6.848,343.49
+20,11,Puebla,Chilpancingo,305.11,4.151,189.17
+20,12,Puebla,Pachuca,196.653,2.77,165.19
+20,13,Puebla,Guadalajara,769.573,11.235,615.66
+20,14,Puebla,Toluca,221.624,3.358,168.43
+20,15,Puebla,Morelia,486.322,7.659,350.15
+20,16,Puebla,Cuernavaca,147.311,1.938,100.17
+20,17,Puebla,Tepic,1083.872,14.747,693.68
+20,18,Puebla,Monterrey,1172.964,16.521,1008.75
+20,19,Puebla,Oaxaca de Juarez,371.854,5.429,304.92
+20,20,Puebla,Puebla,0.0,0.0,0.0
+20,21,Puebla,Santiago de Queretaro,439.277,6.918,325.07
+20,22,Puebla,Chetumal,1457.897,19.183,1020.53
+20,23,Puebla,San Luis Potosi,664.268,9.038,438.42
+20,24,Puebla,Culiacan,1771.431,24.95,1098.29
+20,25,Puebla,Hermosillo,2402.748,35.077,2018.31
+20,26,Puebla,Villahermosa,841.354,12.748,673.08
+20,27,Puebla,Ciudad Victoria,713.686,11.239,542.4
+20,28,Puebla,Tlaxcala,43.368,0.571,31.23
+20,29,Puebla,Xalapa,220.214,2.996,149.75
+20,30,Puebla,Merida,1255.013,17.676,803.21
+20,31,Puebla,Zacatecas,882.082,12.877,758.59
+21,0,Santiago de Queretaro,Aguascalientes,375.075,5.476,240.05
+21,1,Santiago de Queretaro,Mexicali,2821.79,42.754,2426.74
+21,2,Santiago de Queretaro,La Paz,1638.1,25.797,1343.24
+21,3,Santiago de Queretaro,San Francisco de Campeche,1414.271,18.609,1103.13
+21,4,Santiago de Queretaro,Saltillo,790.164,10.751,584.72
+21,5,Santiago de Queretaro,Colima,587.607,8.276,411.33
+21,6,Santiago de Queretaro,Tuxtla Gutierrez,1245.799,18.187,822.23
+21,7,Santiago de Queretaro,Chihuahua,1604.697,24.314,994.91
+21,8,Santiago de Queretaro,Ciudad de Mexico,254.031,4.0,213.39
+21,9,Santiago de Queretaro,Durango,856.383,11.268,685.11
+21,10,Santiago de Queretaro,Guanajuato,137.189,1.867,104.26
+21,11,Santiago de Queretaro,Chilpancingo,502.364,7.076,361.7
+21,12,Santiago de Queretaro,Pachuca,271.833,3.968,184.85
+21,13,Santiago de Queretaro,Guadalajara,429.872,6.513,275.12
+21,14,Santiago de Queretaro,Toluca,243.911,3.841,209.76
+21,15,Santiago de Queretaro,Morelia,175.356,2.307,143.79
+21,16,Santiago de Queretaro,Cuernavaca,320.849,4.365,250.26
+21,17,Santiago de Queretaro,Tepic,734.846,10.35,543.79
+21,18,Santiago de Queretaro,Monterrey,798.195,11.652,558.74
+21,19,Santiago de Queretaro,Oaxaca de Juarez,822.163,12.457,542.63
+21,20,Santiago de Queretaro,Puebla,391.689,6.168,242.85
+21,21,Santiago de Queretaro,Santiago de Queretaro,0.0,0.0,0.0
+21,22,Santiago de Queretaro,Chetumal,1994.909,27.142,1595.93
+21,23,Santiago de Queretaro,San Luis Potosi,262.717,3.7,199.66
+21,24,Santiago de Queretaro,Culiacan,1295.784,18.917,932.96
+21,25,Santiago de Queretaro,Hermosillo,1966.182,29.791,1337.0
+21,26,Santiago de Queretaro,Villahermosa,1225.761,19.303,784.49
+21,27,Santiago de Queretaro,Ciudad Victoria,501.203,6.595,431.03
+21,28,Santiago de Queretaro,Tlaxcala,380.833,5.181,312.28
+21,29,Santiago de Queretaro,Xalapa,581.174,8.186,453.32
+21,30,Santiago de Queretaro,Merida,1566.943,22.875,1159.54
+21,31,Santiago de Queretaro,Zacatecas,492.957,7.469,345.07
+22,0,Chetumal,Aguascalientes,2122.685,32.162,1570.79
+22,1,Chetumal,Mexicali,4727.574,74.45,3309.3
+22,2,Chetumal,La Paz,3295.741,43.365,2175.19
+22,3,Chetumal,San Francisco de Campeche,415.845,5.658,257.82
+22,4,Chetumal,Saltillo,2098.417,29.555,1762.67
+22,5,Chetumal,Colima,2412.745,35.223,1930.2
+22,6,Chetumal,Tuxtla Gutierrez,748.495,11.341,568.86
+22,7,Chetumal,Chihuahua,3134.033,49.355,2256.5
+22,8,Chetumal,Ciudad de Mexico,1552.34,20.426,1055.59
+22,9,Chetumal,Durango,2628.571,35.763,1682.29
+22,10,Chetumal,Guanajuato,1860.783,26.208,1600.27
+22,11,Chetumal,Chilpancingo,1720.089,25.111,1410.47
+22,12,Chetumal,Pachuca,1722.524,26.099,1343.57
+22,13,Chetumal,Guadalajara,2286.051,36.001,1691.68
+22,14,Chetumal,Toluca,1840.181,24.213,1288.13
+22,15,Chetumal,Morelia,1934.379,26.318,1276.69
+22,16,Chetumal,Cuernavaca,1753.854,24.702,1087.39
+22,17,Chetumal,Tepic,2485.452,36.284,2087.78
+22,18,Chetumal,Monterrey,2224.152,33.699,1779.32
+22,19,Chetumal,Oaxaca de Juarez,1264.762,19.918,961.22
+22,20,Chetumal,Puebla,1564.898,20.591,1126.73
+22,21,Chetumal,Santiago de Queretaro,1780.58,24.226,1210.79
+22,22,Chetumal,Chetumal,0.0,0.0,0.0
+22,23,Chetumal,San Luis Potosi,1894.916,27.663,1629.63
+22,24,Chetumal,Culiacan,3079.583,46.66,2525.26
+22,25,Chetumal,Hermosillo,3502.173,55.152,2731.7
+22,26,Chetumal,Villahermosa,721.526,9.494,533.93
+22,27,Chetumal,Ciudad Victoria,1701.493,23.15,1191.05
+22,28,Chetumal,Tlaxcala,1518.505,21.387,1002.21
+22,29,Chetumal,Xalapa,1413.803,20.639,876.56
+22,30,Chetumal,Merida,438.767,6.648,368.56
+22,31,Chetumal,Zacatecas,2395.853,37.73,1916.68
+23,0,San Luis Potosi,Aguascalientes,206.627,3.254,173.57
+23,1,San Luis Potosi,Mexicali,2565.922,33.762,2052.74
+23,2,San Luis Potosi,La Paz,1478.147,20.111,1123.39
+23,3,San Luis Potosi,San Francisco de Campeche,1570.928,22.126,1131.07
+23,4,San Luis Potosi,Saltillo,553.883,8.086,376.64
+23,5,San Luis Potosi,Colima,612.93,9.287,392.28
+23,6,San Luis Potosi,Tuxtla Gutierrez,1567.292,24.682,1347.87
+23,7,San Luis Potosi,Chihuahua,1265.206,16.647,1037.47
+23,8,San Luis Potosi,Ciudad de Mexico,555.852,7.563,433.56
+23,9,San Luis Potosi,Durango,620.445,8.739,459.13
+23,10,San Luis Potosi,Guanajuato,174.143,2.542,121.9
+23,11,San Luis Potosi,Chilpancingo,780.771,11.83,515.31
+23,12,San Luis Potosi,Pachuca,440.805,6.942,273.3
+23,13,San Luis Potosi,Guadalajara,435.652,5.732,365.95
+23,14,San Luis Potosi,Toluca,476.893,6.488,381.51
+23,15,San Luis Potosi,Morelia,406.023,5.719,308.58
+23,16,San Luis Potosi,Cuernavaca,557.949,8.145,401.72
+23,17,San Luis Potosi,Tepic,613.948,9.302,417.48
+23,18,San Luis Potosi,Monterrey,555.819,8.753,355.72
+23,19,San Luis Potosi,Oaxaca de Juarez,1087.379,14.308,935.15
+23,20,San Luis Potosi,Puebla,635.387,8.645,521.02
+23,21,San Luis Potosi,Santiago de Queretaro,281.651,3.967,219.69
+23,22,San Luis Potosi,Chetumal,1965.754,28.697,1454.66
+23,23,San Luis Potosi,San Luis Potosi,0.0,0.0,0.0
+23,24,San Luis Potosi,Culiacan,1027.772,16.185,678.33
+23,25,San Luis Potosi,Hermosillo,1951.944,25.683,1210.21
+23,26,San Luis Potosi,Villahermosa,1386.485,18.864,1164.65
+23,27,San Luis Potosi,Ciudad Victoria,346.704,4.883,277.36
+23,28,San Luis Potosi,Tlaxcala,621.447,9.072,472.3
+23,29,San Luis Potosi,Xalapa,696.714,10.556,501.63
+23,30,San Luis Potosi,Merida,1744.739,27.476,1186.42
+23,31,San Luis Potosi,Zacatecas,243.544,3.205,155.87
+24,0,Culiacan,Aguascalientes,840.85,11.064,571.78
+24,1,Culiacan,Mexicali,1753.341,23.855,1122.14
+24,2,Culiacan,La Paz,428.788,6.039,368.76
+24,3,Culiacan,San Francisco de Campeche,2794.392,40.794,2291.4
+24,4,Culiacan,Saltillo,936.971,14.197,730.84
+24,5,Culiacan,Colima,983.92,15.495,728.1
+24,6,Culiacan,Tuxtla Gutierrez,2571.494,33.835,1800.05
+24,7,Culiacan,Chihuahua,620.963,8.448,409.84
+24,8,Culiacan,Ciudad de Mexico,1583.356,22.301,981.68
+24,9,Culiacan,Durango,416.861,6.086,350.16
+24,10,Culiacan,Guanajuato,1016.798,15.406,813.44
+24,11,Culiacan,Chilpancingo,1690.96,26.629,1285.13
+24,12,Culiacan,Pachuca,1423.652,18.732,1025.03
+24,13,Culiacan,Guadalajara,936.931,12.747,637.11
+24,14,Culiacan,Toluca,1429.893,20.139,915.13
+24,15,Culiacan,Morelia,1322.162,19.302,1137.06
+24,16,Culiacan,Cuernavaca,1556.867,23.589,1276.63
+24,17,Culiacan,Tepic,612.983,9.653,478.13
+24,18,Culiacan,Monterrey,1075.885,14.156,796.15
+24,19,Culiacan,Oaxaca de Juarez,1973.23,26.847,1381.26
+24,20,Culiacan,Puebla,1756.791,24.744,1159.48
+24,21,Culiacan,Santiago de Queretaro,1240.878,18.115,769.34
+24,22,Culiacan,Chetumal,2838.572,43.009,2384.4
+24,23,Culiacan,San Luis Potosi,1064.478,16.763,851.58
+24,24,Culiacan,Culiacan,0.0,0.0,0.0
+24,25,Culiacan,Hermosillo,900.286,12.249,648.21
+24,26,Culiacan,Villahermosa,2401.653,33.826,1633.12
+24,27,Culiacan,Ciudad Victoria,1135.502,16.577,726.72
+24,28,Culiacan,Tlaxcala,1653.57,25.054,1422.07
+24,29,Culiacan,Xalapa,1696.711,26.72,1391.3
+24,30,Culiacan,Merida,2826.472,37.19,2204.65
+24,31,Culiacan,Zacatecas,766.304,10.426,567.07
+25,0,Hermosillo,Aguascalientes,1722.379,23.434,1343.46
+25,1,Hermosillo,Mexicali,806.146,11.354,596.55
+25,2,Hermosillo,La Paz,840.709,12.273,588.5
+25,3,Hermosillo,San Francisco de Campeche,3332.0,50.485,2199.12
+25,4,Hermosillo,Saltillo,1457.703,22.956,903.78
+25,5,Hermosillo,Colima,1986.973,26.144,1669.06
+25,6,Hermosillo,Tuxtla Gutierrez,3266.522,44.442,2613.22
+25,7,Hermosillo,Chihuahua,649.099,9.142,493.32
+25,8,Hermosillo,Ciudad de Mexico,2405.219,35.113,1731.76
+25,9,Hermosillo,Durango,1194.848,18.104,812.5
+25,10,Hermosillo,Guanajuato,1779.755,28.028,1139.04
+25,11,Hermosillo,Chilpancingo,2572.499,33.849,2212.35
+25,12,Hermosillo,Pachuca,2230.732,30.35,1829.2
+25,13,Hermosillo,Guadalajara,1872.788,26.377,1460.77
+25,14,Hermosillo,Toluca,2324.301,33.931,1719.98
+25,15,Hermosillo,Morelia,2001.75,30.33,1401.23
+25,16,Hermosillo,Cuernavaca,2518.096,39.655,1661.94
+25,17,Hermosillo,Tepic,1515.525,19.941,939.63
+25,18,Hermosillo,Monterrey,1541.983,20.979,1295.27
+25,19,Hermosillo,Oaxaca de Juarez,3002.532,42.289,2402.03
+25,20,Hermosillo,Puebla,2468.278,36.033,1875.89
+25,21,Hermosillo,Santiago de Queretaro,1947.976,29.515,1402.54
+25,22,Hermosillo,Chetumal,3898.646,61.396,2651.08
+25,23,Hermosillo,San Luis Potosi,1806.759,23.773,1156.33
+25,24,Hermosillo,Culiacan,801.936,10.911,689.66
+25,25,Hermosillo,Hermosillo,0.0,0.0,0.0
+25,26,Hermosillo,Villahermosa,3134.939,45.766,2445.25
+25,27,Hermosillo,Ciudad Victoria,1769.76,26.815,1309.62
+25,28,Hermosillo,Tlaxcala,2499.272,39.359,1749.49
+25,29,Hermosillo,Xalapa,2494.73,32.825,1646.52
+25,30,Hermosillo,Merida,3606.863,49.073,2236.26
+25,31,Hermosillo,Zacatecas,1606.256,22.623,1349.26
+26,0,Villahermosa,Aguascalientes,1654.337,23.301,1025.69
+26,1,Villahermosa,Mexicali,4122.06,60.176,3462.53
+26,2,Villahermosa,La Paz,2735.601,41.449,2188.48
+26,3,Villahermosa,San Francisco de Campeche,444.965,7.007,338.17
+26,4,Villahermosa,Saltillo,1770.177,23.292,1274.53
+26,5,Villahermosa,Colima,1654.717,22.513,1125.21
+26,6,Villahermosa,Tuxtla Gutierrez,191.884,2.703,122.81
+26,7,Villahermosa,Chihuahua,2742.02,40.029,2358.14
+26,8,Villahermosa,Ciudad de Mexico,987.541,14.963,809.78
+26,9,Villahermosa,Durango,1953.324,30.761,1523.59
+26,10,Villahermosa,Guanajuato,1254.838,16.511,928.58
+26,11,Villahermosa,Chilpancingo,1041.691,14.173,729.18
+26,12,Villahermosa,Pachuca,938.075,13.212,619.13
+26,13,Villahermosa,Guadalajara,1548.835,22.611,960.28
+26,14,Villahermosa,Toluca,1098.569,16.645,922.8
+26,15,Villahermosa,Morelia,1296.357,20.415,1037.09
+26,16,Villahermosa,Cuernavaca,934.55,12.297,710.26
+26,17,Villahermosa,Tepic,2028.13,27.594,1460.25
+26,18,Villahermosa,Monterrey,1699.151,23.932,1155.42
+26,19,Villahermosa,Oaxaca de Juarez,587.412,8.575,375.94
+26,20,Villahermosa,Puebla,768.823,11.649,661.19
+26,21,Villahermosa,Santiago de Queretaro,1257.738,19.807,1031.34
+26,22,Villahermosa,Chetumal,715.197,9.41,557.85
+26,23,Villahermosa,San Luis Potosi,1325.136,18.029,980.6
+26,24,Villahermosa,Culiacan,2573.2,36.242,1801.24
+26,25,Villahermosa,Hermosillo,3247.91,47.415,2143.62
+26,26,Villahermosa,Villahermosa,0.0,0.0,0.0
+26,27,Villahermosa,Ciudad Victoria,1218.543,19.19,1023.58
+26,28,Villahermosa,Tlaxcala,863.69,11.364,690.95
+26,29,Villahermosa,Xalapa,647.362,8.808,492.0
+26,30,Villahermosa,Merida,661.524,9.317,476.3
+26,31,Villahermosa,Zacatecas,1730.233,25.259,1176.56
+27,0,Ciudad Victoria,Aguascalientes,544.094,7.943,391.75
+27,1,Ciudad Victoria,Mexicali,2569.286,38.929,1747.11
+27,2,Ciudad Victoria,La Paz,1744.843,27.478,1116.7
+27,3,Ciudad Victoria,San Francisco de Campeche,1468.547,19.323,1262.95
+27,4,Ciudad Victoria,Saltillo,380.532,5.177,312.04
+27,5,Ciudad Victoria,Colima,952.166,13.411,742.69
+27,6,Ciudad Victoria,Tuxtla Gutierrez,1547.004,22.584,1144.78
+27,7,Ciudad Victoria,Chihuahua,1317.261,19.958,922.08
+27,8,Ciudad Victoria,Ciudad de Mexico,692.272,10.902,456.9
+27,9,Ciudad Victoria,Durango,783.174,10.305,485.57
+27,10,Ciudad Victoria,Guanajuato,500.486,6.809,420.41
+27,11,Ciudad Victoria,Chilpancingo,1040.364,14.653,832.29
+27,12,Ciudad Victoria,Pachuca,592.723,8.653,450.47
+27,13,Ciudad Victoria,Guadalajara,777.25,11.777,559.62
+27,14,Ciudad Victoria,Toluca,675.885,10.644,459.6
+27,15,Ciudad Victoria,Morelia,755.391,9.939,483.45
+27,16,Ciudad Victoria,Cuernavaca,787.833,10.719,677.54
+27,17,Ciudad Victoria,Tepic,910.053,12.818,746.24
+27,18,Ciudad Victoria,Monterrey,338.504,4.942,264.03
+27,19,Ciudad Victoria,Oaxaca de Juarez,1201.868,18.21,889.38
+27,20,Ciudad Victoria,Puebla,788.453,12.417,551.92
+27,21,Ciudad Victoria,Santiago de Queretaro,534.617,7.034,352.85
+27,22,Ciudad Victoria,Chetumal,1750.107,23.811,1085.07
+27,23,Ciudad Victoria,San Luis Potosi,399.535,5.627,335.61
+27,24,Ciudad Victoria,Culiacan,1265.273,18.471,1012.22
+27,25,Ciudad Victoria,Hermosillo,1904.599,28.858,1447.5
+27,26,Ciudad Victoria,Villahermosa,1264.963,19.921,910.77
+27,27,Ciudad Victoria,Ciudad Victoria,0.0,0.0,0.0
+27,28,Ciudad Victoria,Tlaxcala,756.039,10.286,483.87
+27,29,Ciudad Victoria,Xalapa,758.955,10.69,652.7
+27,30,Ciudad Victoria,Merida,1448.594,21.147,1187.85
+27,31,Ciudad Victoria,Zacatecas,498.864,7.559,389.11
+28,0,Tlaxcala,Aguascalientes,769.427,11.658,630.93
+28,1,Tlaxcala,Mexicali,3332.056,52.473,2599.0
+28,2,Tlaxcala,La Paz,1945.253,25.595,1439.49
+28,3,Tlaxcala,San Francisco de Campeche,1130.815,15.385,791.57
+28,4,Tlaxcala,Saltillo,999.017,14.071,659.35
+28,5,Tlaxcala,Colima,884.261,12.909,548.24
+28,6,Tlaxcala,Tuxtla Gutierrez,916.673,13.889,770.01
+28,7,Tlaxcala,Chihuahua,1904.836,29.997,1523.87
+28,8,Tlaxcala,Ciudad de Mexico,134.378,1.768,102.13
+28,9,Tlaxcala,Durango,1167.649,15.886,840.71
+28,10,Tlaxcala,Guanajuato,494.004,6.958,335.92
+28,11,Tlaxcala,Chilpancingo,360.696,5.266,230.85
+28,12,Tlaxcala,Pachuca,152.943,2.317,131.53
+28,13,Tlaxcala,Guadalajara,801.941,12.629,657.59
+28,14,Tlaxcala,Toluca,209.189,2.752,163.17
+28,15,Tlaxcala,Morelia,428.143,5.825,316.83
+28,16,Tlaxcala,Cuernavaca,173.192,2.439,121.23
+28,17,Tlaxcala,Tepic,1109.979,16.204,732.59
+28,18,Tlaxcala,Monterrey,1089.21,16.503,675.31
+28,19,Tlaxcala,Oaxaca de Juarez,424.416,6.684,356.51
+28,20,Tlaxcala,Puebla,42.587,0.56,34.07
+28,21,Tlaxcala,Santiago de Queretaro,360.431,4.904,273.93
+28,22,Tlaxcala,Chetumal,1612.572,22.712,1161.05
+28,23,Tlaxcala,San Luis Potosi,637.801,9.311,433.7
+28,24,Tlaxcala,Culiacan,1639.191,24.836,1049.08
+28,25,Tlaxcala,Hermosillo,2391.544,37.662,2056.73
+28,26,Tlaxcala,Villahermosa,797.252,10.49,653.75
+28,27,Tlaxcala,Ciudad Victoria,672.747,9.153,524.74
+28,28,Tlaxcala,Tlaxcala,0.0,0.0,0.0
+28,29,Tlaxcala,Xalapa,210.562,3.074,147.39
+28,30,Tlaxcala,Merida,1332.394,20.188,879.38
+28,31,Tlaxcala,Zacatecas,833.922,13.133,517.03
+29,0,Xalapa,Aguascalientes,853.248,13.437,563.14
+29,1,Xalapa,Mexicali,3185.789,41.918,1975.19
+29,2,Xalapa,La Paz,2282.728,31.058,1917.49
+29,3,Xalapa,San Francisco de Campeche,1019.603,14.361,815.68
+29,4,Xalapa,Saltillo,1163.733,16.989,884.44
+29,5,Xalapa,Colima,1053.228,15.958,758.32
+29,6,Xalapa,Tuxtla Gutierrez,733.365,11.549,498.69
+29,7,Xalapa,Chihuahua,1949.467,25.651,1247.66
+29,8,Xalapa,Ciudad de Mexico,325.572,4.43,279.99
+29,9,Xalapa,Durango,1290.011,18.169,1057.81
+29,10,Xalapa,Guanajuato,648.007,9.46,505.45
+29,11,Xalapa,Chilpancingo,540.091,8.183,399.67
+29,12,Xalapa,Pachuca,306.747,4.831,214.72
+29,13,Xalapa,Guadalajara,1015.169,13.357,670.01
+29,14,Xalapa,Toluca,422.273,5.745,261.81
+29,15,Xalapa,Morelia,643.707,9.066,540.71
+29,16,Xalapa,Cuernavaca,355.178,5.185,284.14
+29,17,Xalapa,Tepic,1188.082,18.001,902.94
+29,18,Xalapa,Monterrey,1040.932,16.393,749.47
+29,19,Xalapa,Oaxaca de Juarez,426.541,5.612,290.05
+29,20,Xalapa,Puebla,223.979,3.047,143.35
+29,21,Xalapa,Santiago de Queretaro,571.406,8.048,491.41
+29,22,Xalapa,Chetumal,1343.697,19.616,1101.83
+29,23,Xalapa,San Luis Potosi,742.724,11.253,579.32
+29,24,Xalapa,Culiacan,1743.842,27.462,1290.44
+29,25,Xalapa,Hermosillo,2472.051,32.527,1730.44
+29,26,Xalapa,Villahermosa,618.462,8.414,408.19
+29,27,Xalapa,Ciudad Victoria,699.037,9.846,433.4
+29,28,Xalapa,Tlaxcala,217.822,3.18,182.97
+29,29,Xalapa,Xalapa,0.0,0.0,0.0
+29,30,Xalapa,Merida,1157.42,18.227,879.64
+29,31,Xalapa,Zacatecas,1005.342,13.228,723.85
+30,0,Merida,Aguascalientes,1940.17,25.529,1474.53
+30,1,Merida,Mexicali,4179.699,56.867,3009.38
+30,2,Merida,La Paz,3116.612,43.896,2119.3
+30,3,Merida,San Francisco de Campeche,226.654,3.309,145.06
+30,4,Merida,Saltillo,1798.493,27.25,1546.7
+30,5,Merida,Colima,2094.503,32.984,1717.49
+30,6,Merida,Tuxtla Gutierrez,833.763,10.971,650.34
+30,7,Merida,Chihuahua,2579.723,35.098,1908.99
+30,8,Merida,Ciudad de Mexico,1383.241,19.482,968.27
+30,9,Merida,Durango,2148.194,31.36,1417.81
+30,10,Merida,Guanajuato,1627.201,24.655,1008.86
+30,11,Merida,Chilpancingo,1714.394,26.998,1440.09
+30,12,Merida,Pachuca,1473.358,19.386,1178.69
+30,13,Merida,Guadalajara,2177.953,29.632,1655.24
+30,14,Merida,Toluca,1611.609,22.699,1160.36
+30,15,Merida,Morelia,1823.244,26.617,1239.81
+30,16,Merida,Cuernavaca,1531.701,23.208,980.29
+30,17,Merida,Tepic,2335.271,36.776,2008.33
+30,18,Merida,Monterrey,1770.769,23.3,1452.03
+30,19,Merida,Oaxaca de Juarez,1252.255,17.037,976.76
+30,20,Merida,Puebla,1326.051,18.677,981.28
+30,21,Merida,Santiago de Queretaro,1595.695,23.295,1116.99
+30,22,Merida,Chetumal,430.932,6.529,284.41
+30,23,Merida,San Luis Potosi,1653.709,26.043,1025.3
+30,24,Merida,Culiacan,2586.941,34.039,2173.03
+30,25,Merida,Hermosillo,3189.54,43.395,2551.63
+30,26,Merida,Villahermosa,655.341,9.23,498.06
+30,27,Merida,Ciudad Victoria,1382.749,20.186,995.58
+30,28,Merida,Tlaxcala,1426.723,21.617,970.17
+30,29,Merida,Xalapa,1197.331,18.856,766.29
+30,30,Merida,Merida,0.0,0.0,0.0
+30,31,Merida,Zacatecas,2046.56,27.844,1678.18
+31,0,Zacatecas,Aguascalientes,138.352,1.882,118.98
+31,1,Zacatecas,Mexicali,2247.773,31.659,1843.17
+31,2,Zacatecas,La Paz,1079.178,15.754,841.76
+31,3,Zacatecas,San Francisco de Campeche,1734.365,26.278,1283.43
+31,4,Zacatecas,Saltillo,452.144,7.12,316.5
+31,5,Zacatecas,Colima,550.716,7.246,363.47
+31,6,Zacatecas,Tuxtla Gutierrez,1606.055,21.851,995.75
+31,7,Zacatecas,Chihuahua,993.719,13.996,834.72
+31,8,Zacatecas,Ciudad de Mexico,692.942,10.116,554.35
+31,9,Zacatecas,Durango,340.407,5.158,258.71
+31,10,Zacatecas,Guanajuato,319.908,5.038,230.33
+31,11,Zacatecas,Chilpancingo,891.773,11.734,606.41
+31,12,Zacatecas,Pachuca,664.899,9.046,425.54
+31,13,Zacatecas,Guadalajara,332.968,4.69,286.35
+31,14,Zacatecas,Toluca,662.159,9.667,542.97
+31,15,Zacatecas,Morelia,497.361,7.536,387.94
+31,16,Zacatecas,Cuernavaca,742.14,11.687,549.18
+31,17,Zacatecas,Tepic,371.759,4.892,260.23
+31,18,Zacatecas,Monterrey,534.128,7.267,352.52
+31,19,Zacatecas,Oaxaca de Juarez,1183.771,16.673,733.94
+31,20,Zacatecas,Puebla,826.952,12.072,694.64
+31,21,Zacatecas,Santiago de Queretaro,446.211,6.761,356.97
+31,22,Zacatecas,Chetumal,2096.371,33.014,1593.24
+31,23,Zacatecas,San Luis Potosi,238.992,3.145,172.07
+31,24,Zacatecas,Culiacan,724.882,9.862,492.92
+31,25,Zacatecas,Hermosillo,1466.582,20.656,938.61
+31,26,Zacatecas,Villahermosa,1526.677,22.287,1312.94
+31,27,Zacatecas,Ciudad Victoria,494.158,7.487,405.21
+31,28,Zacatecas,Tlaxcala,796.017,12.536,620.89
+31,29,Zacatecas,Xalapa,925.973,12.184,685.22
+31,30,Zacatecas,Merida,1821.092,24.777,1274.76
+31,31,Zacatecas,Zacatecas,0.0,0.0,0.0

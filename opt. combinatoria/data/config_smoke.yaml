@@ -1,0 +1,32 @@
+{
+  "start_capital": "Ciudad de Mexico",
+  "vehicle_id": "sedan_gasolina",
+  "hourly_value_mxn": {
+    "start": 120.0,
+    "end": 200.0,
+    "step": 80.0
+  },
+  "algorithm_params": {
+    "seeds": [7],
+    "aco": {
+      "num_ants": 20,
+      "iterations": 20,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "evaporation": 0.35,
+      "q": 120.0
+    },
+    "ga": {
+      "population_size": 50,
+      "generations": 30,
+      "crossover_rate": 0.9,
+      "mutation_rate": 0.22,
+      "elite_size": 3,
+      "tournament_size": 3
+    }
+  },
+  "visualization": {
+    "fps": 5,
+    "figsize": [10, 8]
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "vehicle_id": "sedan_gasolina",
+    "display_name": "Sedan Gasolina",
+    "fuel_km_per_l": 15.5,
+    "fuel_price_mxn_per_l": 24.2
+  },
+  {
+    "vehicle_id": "hibrido",
+    "display_name": "Hibrido",
+    "fuel_km_per_l": 23.0,
+    "fuel_price_mxn_per_l": 24.2
+  },
+  {
+    "vehicle_id": "compacto",
+    "display_name": "Compacto",
+    "fuel_km_per_l": 18.2,
+    "fuel_price_mxn_per_l": 24.2
+  }
+]
