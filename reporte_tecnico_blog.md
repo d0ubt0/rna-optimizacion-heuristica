@@ -1,11 +1,11 @@
 ﻿# Reporte técnico (entrada de blog): Optimización numérica y combinatoria
 
-**Curso:** Redes Neuronales y Algoritmos Bioinspirados  
-**Equipo:** Sebastián Pabón Núñez, Jhofred Jahat Camacho Gómez  
-**Fecha:** 24/03/2026  
+**Curso:** Redes Neuronales y Algoritmos Bioinspirados
+**Equipo:** Sebastián Pabón Núñez, Jhofred Jahat Camacho Gómez
+**Fecha:** 24/03/2026
 **Repositorio de código:** [Github](https://github.com/d0ubt0/rna-optimizacion-heuristica)
 
-> Este documento sigue los requisitos del enunciado.  
+> Este documento sigue los requisitos del enunciado.
 > La bibliografía en formato APA con enlaces reales está en `bibliografia_apa.txt`.
 
 ## Resumen ejecutivo
@@ -13,100 +13,109 @@ Se resolvieron dos problemas: (1) optimización numérica en funciones de prueba
 
 ## 1) Parte 1: Optimización numérica
 
-### 1.1 Funciones seleccionadas
-De la lista propuesta se eligieron:
-- **Función 1:** Rastrigin.
-- **Función 2:** Rosenbrock.
 
-**Justificación de selección:**
-- Rastrigin es altamente multimodal y estresa la exploración global.
-- Rosenbrock tiene un valle estrecho y curvo, útil para evaluar estabilidad y precisión de convergencia.
+### 1. Introducción
+El presente reporte detalla el estudio y comparación de diversos algoritmos de optimización aplicados a dos funciones de prueba clásicas en el ámbito del análisis numérico: **Rosenbrock** (conocida por su estrecho valle) y **Rastrigin** (caracterizada por su alta multimodalidad). El objetivo es evaluar el desempeño de métodos basados en gradiente frente a aproximaciones heurísticas en espacios de búsqueda de 2 y 3 dimensiones.
 
-### 1.2 Métodos implementados
-Se resolvió cada función en 2D y 3D con:
-1. Descenso por gradiente (GD) con condición inicial aleatoria.
-2. Algoritmo evolutivo (EA).
-3. Optimización por enjambre de partículas (PSO).
-4. Evolución diferencial (DE).
+---
 
-### 1.3 Configuración experimental
-- Corridas por caso: **20** (semillas `0..19`).
-- Dimensiones: **2D y 3D**.
-- Iteraciones (todos): **100**.
-- Parámetros GD: `lr=0.001`.
-- Parámetros DE: `población=20`, `F=0.8`, `CR=0.9`.
-- Parámetros EA: `población=50`, `mutación=0.1`, `cruce=0.7`, `elitismo=2`.
-- Parámetros PSO: `partículas=30`, `w=0.7`, `c1=1.5`, `c2=1.5`.
+### 2. Metodología
+Para resolver los problemas de optimización, se implementaron cuatro enfoques distintos:
 
-**Reproducibilidad (Parte 1):**
-```bash
-python "opt. numerica/experimento_parte1.py"
-```
-Esto genera `opt. numerica/resultados_parte1_20corridas.csv`.
+* **Descenso por Gradiente (GD):** Un método iterativo de optimización de primer orden que se desplaza en la dirección opuesta al gradiente de la función en el punto actual. Se utilizó una condición inicial aleatoria.
+* **Algoritmos Evolutivos (EA):** Métodos de búsqueda estocástica inspirados en la evolución biológica (selección, mutación y recombinación) para explorar el espacio de soluciones mediante una población.
+* **Optimización por Enjambre de Partículas (PSO):** Algoritmo basado en el comportamiento social de bandadas de aves o bancos de peces, donde "partículas" se mueven en el espacio ajustando su posición según su mejor experiencia individual y la del grupo.
+* **Evolución Diferencial (DE):** Un tipo de algoritmo evolutivo que optimiza problemas mediante la combinación de vectores de diferencia de la población actual para crear nuevos candidatos.
 
-### 1.4 Métricas y resultados
-Métricas reportadas:
-- Valor final de la función objetivo (promedio, desviación y mejor caso).
-- Número de evaluaciones promedio por corrida.
+---
 
-**Criterio de evaluaciones usado en este reporte:**
-- GD: `iteraciones + 1 = 101`.
-- DE: `población + iteraciones*población + 1 = 2021`.
-- EA: `iteraciones*población + 1 = 5001`.
-- PSO: `partículas + iteraciones*partículas + 1 = 3031`.
+### 3. Resultados
+A continuación, se presentan las métricas obtenidas tras múltiples ejecuciones de cada experimento:
 
-#### Tabla 1. Rastrigin 2D (20 corridas)
-| Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
-|---|---:|---:|---:|---:|
-| GD | 18.108137 | 9.982277 | 1.989918 | 101 |
-| EA | 4.350e-05 | 8.693e-05 | 7.105e-15 | 5001 |
-| PSO | 5.885e-07 | 2.517e-06 | 2.165e-11 | 3031 |
-| DE | 0.099496 | 0.298488 | 7.105e-15 | 2021 |
+| Experimento | Promedio | Mediana | Std | Mínimo | Máximo | Tasa Éxito | Tiempo Medio (s) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| GD Rastrigin 2D | 17.5111 | 18.9041 | 8.5380 | 3.9798 | 28.8535 | 0.0000 | 0.0006 |
+| GD Rastrigin 3D | 27.3611 | 27.8586 | 12.2604 | 4.9747 | 49.7474 | 0.0000 | 0.0005 |
+| GD Rosenbrock 2D | 1.0698 | 0.6317 | 1.3993 | 0.0041 | 4.8054 | 0.1000 | 0.0005 |
+| GD Rosenbrock 3D | 1.3080 | 1.3189 | 1.1161 | 0.0057 | 3.9595 | 0.1000 | 0.0007 |
+| DE Rastrigin 2D | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0934 |
+| DE Rastrigin 3D | 1.2715 | 1.1292 | 0.7849 | 0.2713 | 3.2107 | 0.0000 | 0.0938 |
+| DE Rosenbrock 2D | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0969 |
+| DE Rosenbrock 3D | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0970 |
+| EA Rastrigin 2D | 0.0001 | 0.0000 | 0.0003 | 0.0000 | 0.0011 | 1.0000 | 0.2348 |
+| EA Rastrigin 3D | 0.0003 | 0.0001 | 0.0007 | 0.0000 | 0.0025 | 1.0000 | 0.2371 |
+| EA Rosenbrock 2D | 0.0558 | 0.0021 | 0.0771 | 0.0000 | 0.2048 | 0.6000 | 0.2394 |
+| EA Rosenbrock 3D | 0.4883 | 0.5422 | 0.3390 | 0.0019 | 0.9297 | 0.2000 | 0.2426 |
+| PSO Rastrigin 2D | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0268 |
+| PSO Rastrigin 3D | 0.3010 | 0.0008 | 0.4542 | 0.0000 | 0.9949 | 0.6000 | 0.0270 |
+| PSO Rosenbrock 2D | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 0.0307 |
+| PSO Rosenbrock 3D | 0.0585 | 0.0697 | 0.0422 | 0.0000 | 0.1179 | 0.3000 | 0.0308 |
 
-#### Tabla 2. Rastrigin 3D (20 corridas)
-| Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
-|---|---:|---:|---:|---:|
-| GD | 26.067764 | 12.240703 | 4.974790 | 101 |
-| EA | 7.814e-04 | 0.002294 | 7.015e-08 | 5001 |
-| PSO | 0.151540 | 0.354368 | 2.003e-09 | 3031 |
-| DE | 0.717205 | 0.600599 | 4.775e-05 | 2021 |
+---
 
-#### Tabla 3. Rosenbrock 2D (20 corridas)
-| Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
-|---|---:|---:|---:|---:|
-| GD | 1.294852 | 1.506695 | 0.001980 | 101 |
-| EA | 0.061635 | 0.112428 | 2.932e-06 | 5001 |
-| PSO | 5.848e-06 | 1.310e-05 | 4.531e-10 | 3031 |
-| DE | 5.507e-15 | 1.019e-14 | 8.828e-19 | 2021 |
+### 4. Visualización del proceso
 
-#### Tabla 4. Rosenbrock 3D (20 corridas)
-| Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
-|---|---:|---:|---:|---:|
-| GD | 1.408352 | 1.021637 | 0.005781 | 101 |
-| EA | 0.737961 | 0.572848 | 0.184525 | 5001 |
-| PSO | 0.089464 | 0.047688 | 4.998e-05 | 3031 |
-| DE | 0.002521 | 0.010925 | 8.549e-09 | 2021 |
+#### Función Rastrigin (2D y 3D)
+Representación de la convergencia en una superficie altamente multimodal.
 
-Fuente de datos de tablas: `opt. numerica/resultados_parte1_20corridas.csv`.
+* **Descenso por Gradiente:** Se observa cómo queda atrapado en óptimos locales fácilmente.
+    ![Rastrigin GD](opt.%20numerica/animaciones/animacion_rastrigin.gif)
+    ![Rastrigin 3D GD](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d.gif)
 
-### 1.5 Animaciones (obligatorio)
-- **GIF gradiente:** [animacion_gd_rastrigin_2d.gif](opt.%20numerica/outputs/animacion_gd_rastrigin_2d.gif)
-- **GIF heur?stico (DE):** [animacion_de_rastrigin_2d.gif](opt.%20numerica/outputs/animacion_de_rastrigin_2d.gif)
+* **Evolución Diferencial (DE):**
+    ![Rastrigin DE](opt.%20numerica/animaciones/animacion_rastrigin_de.gif)
+    ![Rastrigin 3D DE](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_de.gif)
 
-**Figura 1.** Trayectoria de optimizaci?n de descenso por gradiente en Rastrigin 2D.
+* **Algoritmos Evolutivos (EA):**
+    ![Rastrigin EA](opt.%20numerica/animaciones/animacion_rastrigin_ea.gif)
+    ![Rastrigin 3D EA](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_ea.gif)
 
-![Figura 1 - GD Rastrigin 2D](opt.%20numerica/outputs/animacion_gd_rastrigin_2d.gif)
+* **PSO:**
+    ![Rastrigin PSO](opt.%20numerica/animaciones/animacion_rastrigin_pso.gif)
+    ![Rastrigin 3D PSO](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_pso.gif)
 
-**Figura 2.** Trayectoria de optimizaci?n por evoluci?n diferencial en Rastrigin 2D.
+#### Función Rosenbrock (2D y 3D)
+Visualización de la búsqueda en el valle parabólico.
 
-![Figura 2 - DE Rastrigin 2D](opt.%20numerica/outputs/animacion_de_rastrigin_2d.gif)
+* **Descenso por Gradiente:**
+    ![Rosenbrock GD](opt.%20numerica/animaciones/animacion_rosenbrock.gif)
+    ![Rosenbrock 3D GD](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d.gif)
 
-### 1.6 Discusión solicitada
-- **Aporte de GD:** menor costo computacional por corrida (101 evaluaciones), implementación directa cuando existe gradiente analítico, y convergencia razonable en regiones suaves.
-- **Aporte de heurísticos:** mejores mínimos finales en problemas multimodales y no convexos; en particular DE/PSO/EA superan ampliamente a GD en Rastrigin y Rosenbrock 3D.
-- **Trade-off principal:** GD usa muchas menos evaluaciones, pero obtiene peores valores finales promedio en la mayoría de los casos de este estudio.
-- **Necesidad de múltiples corridas:** sí. La variabilidad observada (desviaciones no nulas) confirma sensibilidad a semilla e inicialización en métodos heurísticos y también en GD por inicialización aleatoria.
+* **Evolución Diferencial (DE):**
+    ![Rosenbrock DE](opt.%20numerica/animaciones/animacion_rosenbrock_de.gif)
+    ![Rosenbrock 3D DE](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_de.gif)
 
+* **Algoritmos Evolutivos (EA):**
+    ![Rosenbrock EA](opt.%20numerica/animaciones/animacion_rosenbrock_ea.gif)
+    ![Rosenbrock 3D EA](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_ea.gif)
+
+* **PSO:**
+    ![Rosenbrock PSO](opt.%20numerica/animaciones/animacion_rosenbrock_pso.gif)
+    ![Rosenbrock 3D PSO](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_pso.gif)
+
+---
+
+### 5. Discusión
+
+#### Análisis de Métodos
+1.  **¿Qué aportan los métodos de gradiente?**
+    Aportan una velocidad computacional extrema. Como se observa en la columna `Tiempo Medio (s)`, el Descenso por Gradiente es órdenes de magnitud más rápido (~0.0006s) que los heurísticos. Sin embargo, su tasa de éxito es nula en Rastrigin, ya que al no tener visión global, convergen al mínimo local más cercano a su punto de inicio aleatorio.
+
+2.  **¿Qué aportan los heurísticos?**
+    Aportan robustez y capacidad de exploración global. A pesar de requerir un mayor número de evaluaciones (reflejado en tiempos de ejecución superiores, entre 0.02s y 0.24s), logran tasas de éxito de 1.0 (100%) en problemas donde el gradiente falla.
+
+#### Comparativa y Estabilidad
+* **Convergencia:** DE y EA muestran una convergencia muy estable hacia el valor óptimo (promedios cercanos a 0 en Rastrigin y 1 en Rosenbrock).
+* **Estabilidad:** El PSO destaca por un excelente equilibrio entre velocidad (siendo el más rápido de los heurísticos con ~0.02s) y precisión, aunque su tasa de éxito disminuye en dimensiones superiores (3D).
+
+> **Resumen Ventajas/Desventajas:**
+> * **GD:** Ventaja: Rapidez. Desventaja: Inestabilidad en funciones no convexas.
+> * **DE/EA:** Ventaja: Alta probabilidad de encontrar el óptimo global. Desventaja: Alto costo computacional.
+
+---
+
+### 6. Conclusiones
+La elección del algoritmo depende de la naturaleza de la función. Para funciones simples o convexas, el gradiente es imbatible por su eficiencia. No obstante, para problemas complejos y multimodales como Rastrigin, los métodos heurísticos (especialmente la Evolución Diferencial y el PSO) son indispensables para garantizar el hallazgo de la solución óptima, sacrificando tiempo de cómputo por fiabilidad.
 ## 2) Parte 2: Optimización combinatoria (TSP de 32 capitales)
 
 ### 2.1 Definición del problema
