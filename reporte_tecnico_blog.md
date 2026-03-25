@@ -1,4 +1,4 @@
-﻿# Reporte técnico (entrada de blog): Optimización numérica y combinatoria
+﻿# Reporte técnico: Optimización numérica y combinatoria
 
 **Curso:** Redes Neuronales y Algoritmos Bioinspirados
 **Equipo:** Sebastián Pabón Núñez, Jhofred Jahat Camacho Gómez
