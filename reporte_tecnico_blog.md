@@ -116,31 +116,32 @@ Visualización de la búsqueda en el valle parabólico.
 
 ### 6. Conclusiones
 La elección del algoritmo depende de la naturaleza de la función. Para funciones simples o convexas, el gradiente es imbatible por su eficiencia. No obstante, para problemas complejos y multimodales como Rastrigin, los métodos heurísticos (especialmente la Evolución Diferencial y el PSO) son indispensables para garantizar el hallazgo de la solución óptima, sacrificando tiempo de cómputo por fiabilidad.
-## 2) Parte 2: Optimización combinatoria (TSP de 32 capitales)
+## 2) Optimización combinatoria 
 
-### 2.1 Definición del problema
+### 1. Definición del problema
 Un vendedor debe visitar todas las capitales de los 32 estados de México y regresar al origen (Ciudad de México en esta configuración).
 
-### 2.2 Modelado de costo
+---
+
+### 2. Modelado de costo
 El costo entre ciudades se modeló como:
+$$C_{ij} = (valor\_hora \cdot tiempo_{ij}) + peajes_{ij} + combustible_{ij}$$
 
-\[
-C_{ij} = (valor\_hora \cdot tiempo_{ij}) + peajes_{ij} + combustible_{ij}
-\]
+donde:
 
-con
+$$combustible_{ij} = distancia_{ij} \cdot \frac{precio\_litro}{rendimiento_{km/L}}$$
 
-\[
-combustible_{ij} = distancia_{ij} \cdot \frac{precio\_litro}{rendimiento\_{km/L}}
-\]
+---
 
-### 2.3 Vehículo y parámetro estudiado
+### 3. Vehículo y parámetro estudiado
 - Vehículo seleccionado: **Sedan Gasolina** (`vehicle_id=sedan_gasolina`).
 - Rendimiento: **15.5 km/L**.
 - Precio combustible: **24.2 MXN/L**.
 - Parámetro analizado: `valor_hora` en **[100, 300] MXN/h** con paso **50**.
 
-### 2.4 Métodos implementados
+---
+
+### 4. Métodos implementados
 - Colonia de hormigas (ACO).
 - Algoritmo genético (GA).
 
@@ -149,7 +150,11 @@ Configuración usada (archivo `opt. combinatoria/data/config.yaml`):
 - ACO: `num_ants=55`, `iterations=120`, `alpha=1.0`, `beta=3.0`, `evaporation=0.35`, `q=120.0`.
 - GA: `population_size=140`, `generations=220`, `crossover_rate=0.9`, `mutation_rate=0.22`, `elite_size=4`, `tournament_size=4`.
 
-### 2.5 Resultados y visualización
+
+---
+
+
+### 5. Resultados y visualización
 #### Tabla 5. Comparativa ACO vs GA por valor-hora
 | Valor hora (MXN/h) | Algoritmo | Mejor costo (MXN) | Promedio (MXN) | Desviación | Seed mejor |
 |---:|---|---:|---:|---:|---:|
@@ -190,38 +195,21 @@ Registrar prompts principales y su impacto real en el resultado.
 
 | ID | Prompt usado | Objetivo | Resultado obtenido | Impacto en calidad/final |
 |---|---|---|---|---|
-| P1 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
-| P2 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
-| P3 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
-
-Guía de análisis:
-- Qué tareas aceleró la IA.
-- Qué errores/sesgos introdujo.
-- Cómo se validó o corrigió la salida.
+| P1 | Genera una visualización animada (GIF) del mejor recorrido TSP sobre un mapa de México: dibuja las capitales con lat/lon, traza la ruta iteración a iteración y guarda mejor_ruta_global.gif y mejor_ruta_global.png con anotaciones de costo, seed y algoritmo. | Generar gifs para acelerar tiempo de desarrollo y usar razonamiento en objetivos mas importantes. | Gifs representando el mejor recorrido en el mapa de México. | Medio |
+| P2 | Propón hiperparámetros iniciales para ACO (alpha, beta, evaporación, q, número de hormigas) orientados a TSP de 32 nodos. | Definir una configuración inicial razonable de ACO para un TSP de 32 ciudades, que balancee exploración y explotación. | Se usó num_ants=55, iterations=120, alpha=1.0, beta=3.0, evaporation=0.35, q=120.0 (config actual), con desempeño competitivo en casi todo el barrido de valor_hora, incluyendo el mejor costo global del experimento (48,133.25 MXN a valor_hora=100) | medio |
 
 ## 5) Video de contribución individual (obligatorio)
 Incluir URL del video final y aportes en primera persona.
 
-- Sebastián Pabón Núñez: [completar aporte específico en primera persona].
-- Jhofred Jahat Camacho Gómez: [completar aporte específico en primera persona].
 - URL video: [completar]
 
-## 6) Publicación como blog
-Este documento está estructurado para publicación en GitHub (README o GitHub Pages):
-1. Contexto y objetivo.
-2. Metodología.
-3. Resultados (tablas y GIF).
-4. Discusión.
-5. Conclusiones.
-6. Repositorio y bibliografía.
-
-## 7) Conclusiones
+## 6) Conclusiones
 - En Parte 1, los métodos heurísticos (en especial DE y PSO) alcanzaron mejores mínimos promedio que GD en los escenarios evaluados.
 - GD tuvo ventaja en costo de evaluación, pero menor calidad de solución en promedio para los casos más difíciles.
 - En Parte 2, ACO fue globalmente más competitivo para `valor_hora` bajos e intermedios; GA mostró mejor mejor-caso en `valor_hora=300`, con mayor variabilidad.
 - La modelación del costo con `valor_hora` cambió de forma significativa la ruta/costo óptimos, por lo que este parámetro es clave en análisis de sensibilidad.
 
-## 8) Bibliograf?a
+## 7) Bibliograf?a
 
 1. Rosenbrock, H. H. (1960). An automatic method for finding the greatest or least value of a function. The Computer Journal, 3(3), 175-184. https://doi.org/10.1093/comjnl/3.3.175
 2. Nocedal, J., & Wright, S. J. (2006). Numerical optimization (2nd ed.). Springer. https://doi.org/10.1007/978-0-387-40065-5
@@ -244,17 +232,3 @@ Este documento está estructurado para publicación en GitHub (README o GitHub P
 19. Secretaria de Infraestructura, Comunicaciones y Transportes (SICT). (2011). Carreteras V2 (incluye modulo Traza tu ruta). https://www.sct.gob.mx/index.php?id=1617
 20. Caminos y Puentes Federales de Ingresos y Servicios Conexos (CAPUFE). (2025). Tarifas CAPUFE [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/tarifas_capufe
 21. Comision Nacional de Energia (CNE). (2025). Historico de precios de gasolinas y diesel reportados por permisionario [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/historico_precios_gasolinas_y_diesel_reportados_por_permisionario
-
-## Checklist de cumplimiento
-- [x] Dos funciones de prueba elegidas y justificadas.
-- [x] Optimización en 2D y 3D con gradiente.
-- [x] Optimización en 2D y 3D con evolutivo, PSO y DE.
-- [x] GIF/video de gradiente y heurístico (Parte 1).
-- [x] ACO y GA para TSP de 32 capitales.
-- [x] Estudio del parámetro valor-hora.
-- [x] Vehículo definido y costo combustible documentado.
-- [x] GIF/video de la mejor ruta en mapa de México (Parte 2).
-- [x] Bibliografía en APA con enlaces reales.
-- [ ] Prompts de IA reportados y discutidos (pendiente de completar por el equipo).
-- [ ] Video de contribución individual incluido (pendiente de enlace final).
-- [x] Repositorio Git referenciado.
