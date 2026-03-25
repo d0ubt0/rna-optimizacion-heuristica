@@ -139,7 +139,7 @@ def crear_animacion(ax, f, trayectoria, nombre=''):
         interval=50
     )
 
-    ani.save(f'animacion_{nombre}.gif', writer='pillow')
+    ani.save(f'opt. numerica/animaciones/animacion_{nombre}.gif', writer='pillow')
 
 
 def heatmap_3d(f, cantidad_puntos: int = 30,
@@ -254,7 +254,7 @@ def crear_animacion_3d(ax, f, trayectoria, nombre=''):
         interval=50
     )
 
-    ani.save(f'animacion_3d_{nombre}.gif', writer='pillow')
+    ani.save(f'opt. numerica/animaciones/animacion_3d_{nombre}.gif', writer='pillow')
 
 def rosenbrock(parametros: np.ndarray) -> float:
     parametros_copy = parametros.copy()
