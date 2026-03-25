@@ -5,9 +5,6 @@
 **Fecha:** 24/03/2026
 **Repositorio de código:** [Github](https://github.com/d0ubt0/rna-optimizacion-heuristica)
 
-> Este documento sigue los requisitos del enunciado.
-> La bibliografía en formato APA con enlaces reales está en `bibliografia_apa.txt`.
-
 ## Resumen ejecutivo
 Se resolvieron dos problemas: (1) optimización numérica en funciones de prueba continuas y (2) optimización combinatoria de rutas en las 32 capitales estatales de México. Para la Parte 1 se compararon descenso por gradiente, algoritmo evolutivo (EA), PSO y evolución diferencial (DE), en 2D y 3D, con 20 corridas por caso. Para la Parte 2 se compararon ACO y GA variando el valor-hora del vendedor, con costos de tiempo, peajes y combustible.
 
@@ -201,7 +198,7 @@ Registrar prompts principales y su impacto real en el resultado.
 ## 5) Video de contribución individual (obligatorio)
 Incluir URL del video final y aportes en primera persona.
 
-- URL video: [completar]
+- URL video: https://drive.google.com/file/d/1_WWLZ-UhydpCneBUtrUm_3TcAOnLVVLS/view?usp=sharing
 
 ## 6) Conclusiones
 - En Parte 1, los métodos heurísticos (en especial DE y PSO) alcanzaron mejores mínimos promedio que GD en los escenarios evaluados.
