@@ -1,12 +1,9 @@
-﻿# Reporte técnico (entrada de blog): Optimización numérica y combinatoria
+﻿# Reporte técnico: Optimización numérica y combinatoria
 
 **Curso:** Redes Neuronales y Algoritmos Bioinspirados  
 **Equipo:** Sebastián Pabón Núñez, Jhofred Jahat Camacho Gómez  
 **Fecha:** 24/03/2026  
 **Repositorio de código:** [Github](https://github.com/d0ubt0/rna-optimizacion-heuristica)
-
-> Este documento sigue los requisitos del enunciado.  
-> La bibliografía en formato APA con enlaces reales está en `bibliografia_apa.txt`.
 
 ## Resumen ejecutivo
 Se resolvieron dos problemas: (1) optimización numérica en funciones de prueba continuas y (2) optimización combinatoria de rutas en las 32 capitales estatales de México. Para la Parte 1 se compararon descenso por gradiente, algoritmo evolutivo (EA), PSO y evolución diferencial (DE), en 2D y 3D, con 20 corridas por caso. Para la Parte 2 se compararon ACO y GA variando el valor-hora del vendedor, con costos de tiempo, peajes y combustible.
@@ -176,13 +173,13 @@ Artefactos:
 - En TSP se modeló costo monetario total por arco incorporando tiempo, peajes y combustible, y se estudió sensibilidad al valor-hora.
 - Se priorizó reproducibilidad mediante configuración explícita y artefactos exportados (CSV/GIF/PNG).
 
-## 4) Uso de IA (obligatorio, plantilla editable)
+## 4) Uso de IA
 Registrar prompts principales y su impacto real en el resultado.
 
 | ID | Prompt usado | Objetivo | Resultado obtenido | Impacto en calidad/final |
 |---|---|---|---|---|
-| P1 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
-| P2 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
+| P1 | Genera una visualización animada (GIF) del mejor recorrido TSP sobre un mapa de México: dibuja las capitales con lat/lon, traza la ruta iteración a iteración y guarda mejor_ruta_global.gif y mejor_ruta_global.png con anotaciones de costo, seed y algoritmo. | Generar gifs para acelerar tiempo de desarrollo y usar razonamiento en objetivos mas importantes. | Gifs representando el mejor recorrido en el mapa de México. | Medio |
+| P2 | Propón hiperparámetros iniciales para ACO (alpha, beta, evaporación, q, número de hormigas) orientados a TSP de 32 nodos. | Definir una configuración inicial razonable de ACO para un TSP de 32 ciudades, que balancee exploración y explotación. | Se usó num_ants=55, iterations=120, alpha=1.0, beta=3.0, evaporation=0.35, q=120.0 (config actual), con desempeño competitivo en casi todo el barrido de valor_hora, incluyendo el mejor costo global del experimento (48,133.25 MXN a valor_hora=100) | medio |
 | P3 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
 
 Guía de análisis:
@@ -190,29 +187,13 @@ Guía de análisis:
 - Qué errores/sesgos introdujo.
 - Cómo se validó o corrigió la salida.
 
-## 5) Video de contribución individual (obligatorio)
-Incluir URL del video final y aportes en primera persona.
-
-- Sebastián Pabón Núñez: [completar aporte específico en primera persona].
-- Jhofred Jahat Camacho Gómez: [completar aporte específico en primera persona].
-- URL video: [completar]
-
-## 6) Publicación como blog
-Este documento está estructurado para publicación en GitHub (README o GitHub Pages):
-1. Contexto y objetivo.
-2. Metodología.
-3. Resultados (tablas y GIF).
-4. Discusión.
-5. Conclusiones.
-6. Repositorio y bibliografía.
-
-## 7) Conclusiones
+## 5) Conclusiones
 - En Parte 1, los métodos heurísticos (en especial DE y PSO) alcanzaron mejores mínimos promedio que GD en los escenarios evaluados.
 - GD tuvo ventaja en costo de evaluación, pero menor calidad de solución en promedio para los casos más difíciles.
 - En Parte 2, ACO fue globalmente más competitivo para `valor_hora` bajos e intermedios; GA mostró mejor mejor-caso en `valor_hora=300`, con mayor variabilidad.
 - La modelación del costo con `valor_hora` cambió de forma significativa la ruta/costo óptimos, por lo que este parámetro es clave en análisis de sensibilidad.
 
-## 8) Bibliograf?a
+## 7) Bibliograf?a
 
 1. Rosenbrock, H. H. (1960). An automatic method for finding the greatest or least value of a function. The Computer Journal, 3(3), 175-184. https://doi.org/10.1093/comjnl/3.3.175
 2. Nocedal, J., & Wright, S. J. (2006). Numerical optimization (2nd ed.). Springer. https://doi.org/10.1007/978-0-387-40065-5
@@ -236,16 +217,3 @@ Este documento está estructurado para publicación en GitHub (README o GitHub P
 20. Caminos y Puentes Federales de Ingresos y Servicios Conexos (CAPUFE). (2025). Tarifas CAPUFE [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/tarifas_capufe
 21. Comision Nacional de Energia (CNE). (2025). Historico de precios de gasolinas y diesel reportados por permisionario [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/historico_precios_gasolinas_y_diesel_reportados_por_permisionario
 
-## Checklist de cumplimiento
-- [x] Dos funciones de prueba elegidas y justificadas.
-- [x] Optimización en 2D y 3D con gradiente.
-- [x] Optimización en 2D y 3D con evolutivo, PSO y DE.
-- [x] GIF/video de gradiente y heurístico (Parte 1).
-- [x] ACO y GA para TSP de 32 capitales.
-- [x] Estudio del parámetro valor-hora.
-- [x] Vehículo definido y costo combustible documentado.
-- [x] GIF/video de la mejor ruta en mapa de México (Parte 2).
-- [x] Bibliografía en APA con enlaces reales.
-- [ ] Prompts de IA reportados y discutidos (pendiente de completar por el equipo).
-- [ ] Video de contribución individual incluido (pendiente de enlace final).
-- [x] Repositorio Git referenciado.
