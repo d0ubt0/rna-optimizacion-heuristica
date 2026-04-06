@@ -78,26 +78,46 @@ En la función Rastrigin, el éxito depende de la capacidad del algoritmo para "
 
 **Descenso por Gradiente (GD):**
 En las animaciones se observa un único agente que se desliza rápidamente hacia la zona de menor altura más cercana.
-![Figura 1: GD en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin.gif)
-![Figura 2: GD en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d.gif)
+
+Tabla 1. Visualización del comportamiento del GD en la función Rastrigin.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 1: GD en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin.gif) |
+| 3D | ![Figura 2: GD en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d.gif) |
+
 * **Análisis de comportamiento:** El GD carece de mecanismos de escape. Una vez que entra en la cuenca de atracción de un mínimo local, el gradiente lo empuja al fondo y lo deja "atrapado" definitivamente. Esto explica por qué su tasa de éxito es 0; en un paisaje tan accidentado, la probabilidad de empezar justo en la cuenca del óptimo global es despreciable.
 
 **Evolución Diferencial (DE):**
 Se observa una población inicial dispersa que, mediante operaciones de mutación basada en vectores de diferencia, comienza a "saltar" entre las crestas de la función.
-![Figura 3: DE en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_de.gif)
-![Figura 4: DE en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_de.gif)
+
+Tabla 2. Visualización del comportamiento del DE en la función Rastrigin.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 3: DE en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_de.gif) |
+| 3D | ![Figura 4: DE en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_de.gif) |
+
 * **Análisis de comportamiento:** DE utiliza la diversidad de la población para estimar la dirección del mínimo global. En las animaciones, se nota cómo la nube de puntos se contrae de forma inteligente hacia el origen, demostrando una resiliencia superior a la multimodalidad.
 
 **Algoritmos Evolutivos (EA):**
 La animación muestra un proceso de "refinamiento" sucesivo. Los puntos rojos representan individuos que sobreviven y se reproducen en zonas prometedoras.
-![Figura 5: EA en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_ea.gif)
-![Figura 6: EA en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_ea.gif)
+
+Tabla 3. Visualización del comportamiento del EA en la función Rastrigin.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 5: EA en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_ea.gif) |
+| 3D | ![Figura 6: EA en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_ea.gif) |
+
 * **Análisis de comportamiento:** El EA mantiene una exploración constante gracias a la mutación. Aunque visualmente parece más errático y lento en converger, esta misma "lentitud" le permite inspeccionar mejor el terreno antes de comprometerse con una solución final, garantizando éxito total en 2D y 3D.
 
 **Optimización por Enjambre de Partículas (PSO):**
 Se visualiza una dinámica de "atracción". Las partículas vuelan hacia el líder del grupo pero conservan una inercia propia que las hace orbitar.
-![Figura 7: PSO en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_pso.gif)
-![Figura 8: PSO en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_pso.gif)
+
+Tabla 4. Visualización del comportamiento del PSO en la función Rastrigin.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 7: PSO en Rastrigin 2D](opt.%20numerica/animaciones/animacion_rastrigin_pso.gif) |
+| 3D | ![Figura 8: PSO en Rastrigin 3D](opt.%20numerica/animaciones/animacion_3d_rastrigin_3d_pso.gif) |
+
 * **Análisis de comportamiento:** Es el método más veloz en agruparse. Sin embargo, en la animación 3D se observa que algunas partículas "orbitan" demasiado rápido y no logran frenar en el punto exacto, lo que reduce su precisión final en dimensiones superiores.
 
 ---
@@ -107,26 +127,46 @@ En Rosenbrock, el desafío no es encontrar la zona baja, sino avanzar por el fon
 
 **Descenso por Gradiente (GD):**
 El agente encuentra el valle de forma casi instantánea, pero una vez dentro, su movimiento se vuelve imperceptible.
-![Figura 9: GD en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock.gif)
-![Figura 10: GD en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d.gif)
+
+Tabla 5. Visualización del comportamiento del GD en la función Rosenbrock.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 9: GD en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock.gif) |
+| 3D | ![Figura 10: GD en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d.gif) |
+
 * **Análisis de comportamiento:** El gradiente en el fondo del valle de Rosenbrock es muy pequeño (cercano a cero). El algoritmo sufre del fenómeno de "zig-zag" o estancamiento, donde avanza pasos minúsculos que no le permiten alcanzar el óptimo real en un tiempo razonable.
 
 **Evolución Diferencial (DE):**
 La población parece "fluir" a lo largo de la curva de la banana de forma fluida.
-![Figura 11: DE en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_de.gif)
-![Figura 12: DE en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_de.gif)
+
+Tabla 6. Visualización del comportamiento del DE en la función Rosenbrock.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 11: DE en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_de.gif) |
+| 3D | ![Figura 12: DE en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_de.gif) |
+
 * **Análisis de comportamiento:** DE es el algoritmo que mejor se adapta a esta topología. Al usar la diferencia entre puntos, genera pasos de búsqueda que se alinean naturalmente con la orientación del valle, permitiendo una convergencia perfecta (1.0) incluso en 3D.
 
 **Algoritmos Evolutivos (EA):**
 La población se concentra en el valle pero queda estirada a lo largo de este, sin lograr colapsar en un único punto.
-![Figura 13: EA en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_ea.gif)
-![Figura 14: EA en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_ea.gif)
+
+Tabla 7. Visualización del comportamiento del EA en la función Rosenbrock.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 13: EA en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_ea.gif) |
+| 3D | ![Figura 14: EA en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_ea.gif) |
+
 * **Análisis de comportamiento:** El mecanismo de mutación aleatoria del EA no es eficiente para seguir trayectorias curvas y estrechas. Los puntos "saltan" fuera del valle y deben volver a entrar, desperdiciando evaluaciones y reduciendo la precisión final.
 
 **Optimización por Enjambre de Partículas (PSO):**
 Las partículas parecen "rebotar" contra las paredes del valle mientras intentan seguir al líder.
-![Figura 15: PSO en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_pso.gif)
-![Figura 16: PSO en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_pso.gif)
+
+Tabla 8. Visualización del comportamiento del PSO en la función Rosenbrock.
+| Dimensión | Representación |
+|----------|--------------|
+| 2D | ![Figura 15: PSO en Rosenbrock 2D](opt.%20numerica/animaciones/animacion_rosenbrock_pso.gif) |
+| 3D | ![Figura 16: PSO en Rosenbrock 3D](opt.%20numerica/animaciones/animacion_3d_rosenbrock_3d_pso.gif) |
+
 * **Análisis de comportamiento:** El PSO lucha contra su propia inercia. Debido a que el valle es curvo, las partículas tienden a seguir una línea recta y salirse del camino óptimo, lo que explica por qué su tasa de éxito cae drásticamente al aumentar la complejidad del problema (3D).
 
 ---
