@@ -15,9 +15,23 @@ De la lista propuesta se eligieron:
 - **Función 1:** Rastrigin.
 - **Función 2:** Rosenbrock.
 
-**Justificación de selección:**
-- Rastrigin es altamente multimodal y estresa la exploración global.
-- Rosenbrock tiene un valle estrecho y curvo, útil para evaluar estabilidad y precisión de convergencia.
+Estas funciones son estándar en evaluación de optimizadores globales y locales porque presentan geometrías muy diferentes del paisaje objetivo (Jamil & Yang, 2013; Surjanovic & Bingham, 2013).
+
+**Ecuación 1. Función de Rastrigin (n dimensiones)**
+
+\[
+f(\mathbf{x}) = 10n + \sum_{i=1}^{n}\left(x_i^2 - 10\cos(2\pi x_i)\right)
+\]
+
+Con dominio típico \(x_i \in [-5.12,5.12]\), mínimo global en \(\mathbf{x}=\mathbf{0}\) y \(f(\mathbf{0})=0\). Su alta multimodalidad la hace útil para evaluar exploración y riesgo de caer en mínimos locales (Surjanovic & Bingham, 2013; Jamil & Yang, 2013).
+
+**Ecuación 2. Función de Rosenbrock (n dimensiones)**
+
+\[
+f(\mathbf{x}) = \sum_{i=1}^{n-1}\left[100(x_{i+1}-x_i^2)^2 + (1-x_i)^2\right]
+\]
+
+Tiene un valle estrecho y curvo con mínimo global en \(\mathbf{x}=(1,\ldots,1)\) y \(f(\mathbf{x})=0\). Es especialmente útil para evaluar estabilidad numérica y precisión de convergencia fina (Rosenbrock, 1960; Surjanovic & Bingham, 2013).
 
 ### 1.2 Métodos implementados
 Se resolvió cada función en 2D y 3D con:
@@ -25,6 +39,8 @@ Se resolvió cada función en 2D y 3D con:
 2. Algoritmo evolutivo (EA).
 3. Optimización por enjambre de partículas (PSO).
 4. Evolución diferencial (DE).
+
+Estos métodos representan enfoques complementarios: un método basado en gradiente para explotación local y tres heurísticos poblacionales para exploración global (Nocedal & Wright, 2006; Holland, 1992; Kennedy & Eberhart, 1995; Storn & Price, 1997).
 
 ### 1.3 Configuración experimental
 - Corridas por caso: **20** (semillas `0..19`).
@@ -52,6 +68,8 @@ Métricas reportadas:
 - EA: `iteraciones*población + 1 = 5001`.
 - PSO: `partículas + iteraciones*partículas + 1 = 3031`.
 
+Para facilitar la lectura, primero se reportan resultados en Rastrigin (Tablas 1 y 2) y luego en Rosenbrock (Tablas 3 y 4), manteniendo el mismo orden de métodos.
+
 #### Tabla 1. Rastrigin 2D (20 corridas)
 | Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
 |---|---:|---:|---:|---:|
@@ -59,6 +77,8 @@ Métricas reportadas:
 | EA | 4.350e-05 | 8.693e-05 | 7.105e-15 | 5001 |
 | PSO | 5.885e-07 | 2.517e-06 | 2.165e-11 | 3031 |
 | DE | 0.099496 | 0.298488 | 7.105e-15 | 2021 |
+
+La Tabla 1 muestra que, en Rastrigin 2D, los métodos heurísticos (EA/PSO/DE) alcanzan mejores valores finales que GD, aunque con mayor número de evaluaciones.
 
 #### Tabla 2. Rastrigin 3D (20 corridas)
 | Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
@@ -68,6 +88,8 @@ Métricas reportadas:
 | PSO | 0.151540 | 0.354368 | 2.003e-09 | 3031 |
 | DE | 0.717205 | 0.600599 | 4.775e-05 | 2021 |
 
+En la Tabla 2, al aumentar a 3D, se mantiene la ventaja de heurísticos sobre GD en calidad de solución, con incremento de variabilidad en PSO y DE.
+
 #### Tabla 3. Rosenbrock 2D (20 corridas)
 | Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
 |---|---:|---:|---:|---:|
@@ -75,6 +97,8 @@ Métricas reportadas:
 | EA | 0.061635 | 0.112428 | 2.932e-06 | 5001 |
 | PSO | 5.848e-06 | 1.310e-05 | 4.531e-10 | 3031 |
 | DE | 5.507e-15 | 1.019e-14 | 8.828e-19 | 2021 |
+
+La Tabla 3 evidencia que, en Rosenbrock 2D, DE obtiene la mejor precisión promedio y mejor caso, consistente con su buen desempeño en valles curvos.
 
 #### Tabla 4. Rosenbrock 3D (20 corridas)
 | Método | Promedio f(x) | Desviación | Mejor | Evaluaciones |
@@ -84,19 +108,27 @@ Métricas reportadas:
 | PSO | 0.089464 | 0.047688 | 4.998e-05 | 3031 |
 | DE | 0.002521 | 0.010925 | 8.549e-09 | 2021 |
 
+En la Tabla 4, DE y PSO mantienen mejor calidad que GD y EA en 3D, aunque con el costo computacional esperado de métodos poblacionales.
+
 Fuente de datos de tablas: `opt. numerica/resultados_parte1_20corridas.csv`.
 
 ### 1.5 Animaciones (obligatorio)
 - **GIF gradiente:** [animacion_gd_rastrigin_2d.gif](opt.%20numerica/outputs/animacion_gd_rastrigin_2d.gif)
-- **GIF heur?stico (DE):** [animacion_de_rastrigin_2d.gif](opt.%20numerica/outputs/animacion_de_rastrigin_2d.gif)
+- **GIF heurístico (DE):** [animacion_de_rastrigin_2d.gif](opt.%20numerica/outputs/animacion_de_rastrigin_2d.gif)
 
-**Figura 1.** Trayectoria de optimizaci?n de descenso por gradiente en Rastrigin 2D.
+Para ilustrar dinámicas de convergencia, a continuación se presenta primero GD y luego DE sobre la misma función objetivo.
+
+**Figura 1.** Trayectoria de optimización de descenso por gradiente en Rastrigin 2D.
 
 ![Figura 1 - GD Rastrigin 2D](opt.%20numerica/outputs/animacion_gd_rastrigin_2d.gif)
 
-**Figura 2.** Trayectoria de optimizaci?n por evoluci?n diferencial en Rastrigin 2D.
+La Figura 1 muestra una trayectoria más sensible a la inicialización y al valle local en esta función multimodal.
+
+**Figura 2.** Trayectoria de optimización por evolución diferencial en Rastrigin 2D.
 
 ![Figura 2 - DE Rastrigin 2D](opt.%20numerica/outputs/animacion_de_rastrigin_2d.gif)
+
+La Figura 2 muestra una exploración poblacional más robusta, coherente con los mejores valores finales observados en las tablas.
 
 ### 1.6 Discusión solicitada
 - **Aporte de GD:** menor costo computacional por corrida (101 evaluaciones), implementación directa cuando existe gradiente analítico, y convergencia razonable en regiones suaves.
@@ -110,17 +142,20 @@ Fuente de datos de tablas: `opt. numerica/resultados_parte1_20corridas.csv`.
 Un vendedor debe visitar todas las capitales de los 32 estados de México y regresar al origen (Ciudad de México en esta configuración).
 
 ### 2.2 Modelado de costo y trazabilidad de fuentes
-El costo entre ciudades se modeló como:
+El costo entre ciudades se modeló con una función compuesta de tiempo, peaje y combustible.
 
+**Ecuación 3. Costo total por arco**
 \[
 C_{ij} = (valor\_hora \cdot tiempo_{ij}) + peajes_{ij} + combustible_{ij}
 \]
 
-con
+**Ecuación 4. Costo de combustible por arco**
 
 \[
 combustible_{ij} = distancia_{ij} \cdot \frac{precio\_litro}{rendimiento\_{km/L}}
 \]
+
+La Ecuación 3 integra costo de oportunidad temporal y costos directos de viaje, mientras que la Ecuación 4 explicita el aporte energético del vehículo según rendimiento.
 
 **Fuente y metodología de extracción (corrección solicitada):**
 - Se dejó un pipeline ETL reproducible en `opt. combinatoria/scripts/costs_etl_inegi.py`.
@@ -132,6 +167,8 @@ combustible_{ij} = distancia_{ij} \cdot \frac{precio\_litro}{rendimiento\_{km/L}
   - `optima` (distancia, tiempo y costo de peaje por par origen-destino),
   - `combustible` (precio de referencia por tipo de combustible).
 - Token usado por variable de entorno (`INEGI_RUTEO_TOKEN`), sin exponer credenciales en el repositorio.
+
+Estas fuentes se seleccionaron por su carácter oficial y cobertura nacional para red vial y costos asociados (INEGI, 2026; CAPUFE, 2025; CNE, 2025).
 
 **Comando de actualización del snapshot:**
 ```bash
@@ -161,6 +198,8 @@ Configuración usada (archivo `opt. combinatoria/data/config.yaml`):
 - GA: `population_size=140`, `generations=220`, `crossover_rate=0.9`, `mutation_rate=0.22`, `elite_size=4`, `tournament_size=4`.
 
 ### 2.5 Resultados y visualización (mapa real)
+En esta sección se presenta primero la comparación cuantitativa ACO vs GA y luego la evidencia visual del comportamiento del GA sobre mapa real.
+
 #### Tabla 5. Comparativa ACO vs GA por valor-hora
 | Valor hora (MXN/h) | Algoritmo | Mejor costo (MXN) | Promedio (MXN) | Desviación | Seed mejor |
 |---:|---|---:|---:|---:|---:|
@@ -175,6 +214,8 @@ Configuración usada (archivo `opt. combinatoria/data/config.yaml`):
 | 300 | ACO | 83556.68 | 85088.15 | 1101.31 | 29 |
 | 300 | GA | 86982.29 | 91954.07 | 3640.59 | 29 |
 
+La Tabla 5 indica que ACO ofrece el mejor desempeño global en este experimento, mientras GA solo supera el mejor-caso de ACO en `valor_hora=250` y con mayor dispersión.
+
 **Mejor solución global observada:** ACO con `valor_hora=100`, costo `46,698.84 MXN`.
 
 Artefactos:
@@ -188,9 +229,13 @@ Artefactos:
 
 ![Figura 3 - Iteraciones GA en mapa real](opt.%20combinatoria/outputs/ruta_ga_iteraciones_mapa_real.gif)
 
+La Figura 3 permite verificar visualmente la evolución iterativa del GA sobre cartografía real, cumpliendo el requisito de seguimiento por iteración.
+
 **Figura 4.** Mejor solución global en mapa real de México.
 
 ![Figura 4 - Mejor solución global en mapa real](opt.%20combinatoria/outputs/mejor_ruta_global.png)
+
+La Figura 4 sintetiza la ruta final de menor costo observada, y complementa la conclusión cuantitativa reportada en la Tabla 5.
 
 ### 2.6 Recomendación al vendedor viajero (orden específico)
 **Recomendación principal (global):**
@@ -216,7 +261,6 @@ Registrar prompts principales y su impacto real en el resultado.
 |---|---|---|---|---|
 | P1 | Genera una visualización animada (GIF) del mejor recorrido TSP sobre un mapa de México: dibuja las capitales con lat/lon, traza la ruta iteración a iteración y guarda mejor_ruta_global.gif y mejor_ruta_global.png con anotaciones de costo, seed y algoritmo. | Generar gifs para acelerar tiempo de desarrollo y usar razonamiento en objetivos mas importantes. | Gifs representando el mejor recorrido en el mapa de México. | Medio |
 | P2 | Propón hiperparámetros iniciales para ACO (alpha, beta, evaporación, q, número de hormigas) orientados a TSP de 32 nodos. | Definir una configuración inicial razonable de ACO para un TSP de 32 ciudades, que balancee exploración y explotación. | Se usó num_ants=55, iterations=120, alpha=1.0, beta=3.0, evaporation=0.35, q=120.0 (config actual), con desempeño competitivo en casi todo el barrido de valor_hora, incluyendo el mejor costo global del experimento (46,698.84 MXN a valor_hora=100) | medio |
-| P3 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
 
 Guía de análisis:
 - Qué tareas aceleró la IA.
