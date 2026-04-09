@@ -1,6 +1,13 @@
-{
+﻿{
   "start_capital": "Ciudad de Mexico",
   "vehicle_id": "sedan_gasolina",
+  "cost_data": {
+    "mode": "snapshot",
+    "matrix_file": "costos_matriz.csv",
+    "provenance_file": "costos_fuentes.json",
+    "fuel_price_mxn_per_l": 23.415,
+    "fuel_price_source": "INEGI SAKBE v3.1 combustible - Regular"
+  },
   "hourly_value_mxn": {
     "start": 120.0,
     "end": 200.0,
@@ -27,6 +34,7 @@
   },
   "visualization": {
     "fps": 5,
-    "figsize": [10, 8]
+    "figsize": [10, 8],
+    "mexico_geojson": "mexico_border.geojson"
   }
 }

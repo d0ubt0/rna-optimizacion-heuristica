@@ -1,3 +1,4 @@
+﻿import json
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence
 
@@ -9,7 +10,7 @@ from .types import SolverResult
 
 
 def _mexico_outline_segments() -> List[np.ndarray]:
-    # Coarse outlines for mainland and Baja California; enough for route context.
+    # Fallback silhouette if GeoJSON is unavailable.
     mainland = np.array(
         [
             [-117.1, 32.5],
@@ -77,33 +78,75 @@ def _mexico_outline_segments() -> List[np.ndarray]:
     return [mainland, baja]
 
 
+def _extract_country_rings(geojson_path: Path) -> List[np.ndarray]:
+    payload = json.loads(geojson_path.read_text(encoding='utf-8'))
+    features = []
+    if payload.get('type') == 'FeatureCollection':
+        features = payload.get('features', [])
+    elif payload.get('type') == 'Feature':
+        features = [payload]
+
+    rings: List[np.ndarray] = []
+    for feature in features:
+        geometry = feature.get('geometry', {})
+        gtype = geometry.get('type')
+        coords = geometry.get('coordinates', [])
+
+        if gtype == 'Polygon':
+            if coords:
+                rings.append(np.array(coords[0], dtype=float))
+        elif gtype == 'MultiPolygon':
+            for polygon in coords:
+                if polygon:
+                    rings.append(np.array(polygon[0], dtype=float))
+
+    if not rings:
+        raise ValueError(f'No polygon geometry found in {geojson_path}.')
+    return rings
+
+
 def _route_coords(route: Sequence[int], capitals: Sequence[Dict]) -> np.ndarray:
     return np.array([[capitals[idx]['lon'], capitals[idx]['lat']] for idx in route], dtype=float)
 
 
-def _build_base_axes(capitals: Sequence[Dict], figsize: Iterable[float]) -> tuple:
+def _build_base_axes(
+    capitals: Sequence[Dict],
+    figsize: Iterable[float],
+    mexico_geojson_path: Path,
+) -> tuple:
     fig, ax = plt.subplots(figsize=tuple(figsize))
 
-    ax.set_facecolor('#f5fbff')
+    ax.set_facecolor('#eef6fb')
     fig.patch.set_facecolor('white')
 
-    for segment in _mexico_outline_segments():
-        ax.plot(segment[:, 0], segment[:, 1], color='#8aa4b8', linewidth=1.0, alpha=0.9)
+    try:
+        segments = _extract_country_rings(mexico_geojson_path)
+        for segment in segments:
+            ax.fill(segment[:, 0], segment[:, 1], facecolor='#e4edf4', edgecolor='#7f95aa', linewidth=0.85, zorder=1)
+    except Exception:
+        segments = _mexico_outline_segments()
+        for segment in segments:
+            ax.plot(segment[:, 0], segment[:, 1], color='#7f95aa', linewidth=1.0, alpha=0.95)
 
     lon = [c['lon'] for c in capitals]
     lat = [c['lat'] for c in capitals]
     labels = [c['capital'] for c in capitals]
 
-    ax.scatter(lon, lat, s=30, color='#12436d', alpha=0.9, zorder=3)
+    ax.scatter(lon, lat, s=28, color='#0a4f7b', alpha=0.9, zorder=3)
     for x, y, label in zip(lon, lat, labels):
-        ax.text(x + 0.12, y + 0.08, label, fontsize=6.5, color='#0f2940', alpha=0.85)
+        ax.text(x + 0.09, y + 0.07, label, fontsize=6.2, color='#0f2940', alpha=0.87)
 
-    ax.set_xlim(-118.6, -86.5)
-    ax.set_ylim(14.0, 33.6)
+    all_x = np.concatenate([seg[:, 0] for seg in segments])
+    all_y = np.concatenate([seg[:, 1] for seg in segments])
+    x_pad = max((all_x.max() - all_x.min()) * 0.05, 0.8)
+    y_pad = max((all_y.max() - all_y.min()) * 0.05, 0.6)
+
+    ax.set_xlim(all_x.min() - x_pad, all_x.max() + x_pad)
+    ax.set_ylim(all_y.min() - y_pad, all_y.max() + y_pad)
     ax.set_xlabel('Longitud')
     ax.set_ylabel('Latitud')
-    ax.set_title('Recorrido del vendedor por capitales de Mexico')
-    ax.grid(alpha=0.15)
+    ax.set_title('Recorrido del vendedor por capitales de Mexico (mapa real)')
+    ax.grid(alpha=0.2, linewidth=0.6)
 
     return fig, ax
 
@@ -113,6 +156,7 @@ def create_route_animation(
     result: SolverResult,
     output_gif: Path,
     output_png: Path,
+    mexico_geojson_path: Path,
     fps: int = 6,
     figsize: Iterable[float] = (10, 8),
 ) -> None:
@@ -122,7 +166,7 @@ def create_route_animation(
         history_routes = [result.route]
         history_costs = [result.total_cost]
 
-    fig, ax = _build_base_axes(capitals, figsize)
+    fig, ax = _build_base_axes(capitals, figsize, mexico_geojson_path)
 
     route_line, = ax.plot([], [], color='#d7263d', linewidth=2.0, zorder=4)
     route_points = ax.scatter([], [], color='#d7263d', s=18, zorder=5)
@@ -133,7 +177,7 @@ def create_route_animation(
         transform=ax.transAxes,
         verticalalignment='top',
         fontsize=10,
-        bbox=dict(boxstyle='round', facecolor='white', alpha=0.78),
+        bbox=dict(boxstyle='round', facecolor='white', alpha=0.82),
     )
 
     def init():
@@ -174,10 +218,10 @@ def create_route_animation(
     route_line.set_data(final_coords[:, 0], final_coords[:, 1])
     route_points.set_offsets(final_coords)
     info.set_text(
-        f'Mejor solucion global ({result.algorithm.upper()})\n'
+        f'Mejor solucion final ({result.algorithm.upper()})\n'
         f'Costo: {result.total_cost:,.2f} MXN\n'
         f'Valor hora: {result.hourly_value_mxn:,.2f} MXN/h\n'
         f'Seed: {result.seed}'
     )
-    fig.savefig(output_png, dpi=180, bbox_inches='tight')
+    fig.savefig(output_png, dpi=200, bbox_inches='tight')
     plt.close(fig)

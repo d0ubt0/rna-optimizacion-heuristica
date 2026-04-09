@@ -1,4 +1,4 @@
-origin_idx,dest_idx,origin_capital,dest_capital,distance_km,time_h,tolls_mxn
+﻿origin_idx,dest_idx,origin_capital,dest_capital,distance_km,time_h,tolls_mxn
 0,0,Aguascalientes,Aguascalientes,0.0,0.0,0.0
 0,1,Aguascalientes,Mexicali,2527.335,34.386,2122.96
 0,2,Aguascalientes,La Paz,1263.369,17.794,1010.7

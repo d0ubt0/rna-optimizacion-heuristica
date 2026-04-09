@@ -1,0 +1,88 @@
+{
+  "generated_at_utc": "2026-04-09T02:41:24.213206+00:00",
+  "source": {
+    "service": "INEGI SAKBE Sistema de Ruteo de Mexico v3.1",
+    "base_url": "https://gaia.inegi.org.mx/sakbe_v3.1",
+    "token_env_var": "INEGI_RUTEO_TOKEN",
+    "endpoint_meta": {
+      "buscalinea": "INEGI, SAKBÉ Sistema de Ruteo de México v3.1, Red Nacional de Caminos Edición 2025",
+      "combustible": "INEGI, SAKBÉ Sistema de Ruteo de México v3.1, Red Nacional de Caminos Edición 2025"
+    },
+    "endpoints_used": [
+      "buscalinea",
+      "optima",
+      "combustible"
+    ]
+  },
+  "parameters": {
+    "projection": "GRS80",
+    "scale_candidates": [
+      20000,
+      30000,
+      50000,
+      100000,
+      200000
+    ],
+    "vehicle_code": "0",
+    "e_code": "0",
+    "fuel_type_selected": "Regular",
+    "timeout_s": 60.0,
+    "retries": 3,
+    "retry_backoff_s": 0.6,
+    "delay_s": 0.0,
+    "checkpoint_every": 10,
+    "ignore_existing": false,
+    "max_routes": 0
+  },
+  "matrix_summary": {
+    "capitals": 32,
+    "rows_written": 1024,
+    "expected_rows_full": 1024,
+    "non_diagonal_rows": 992,
+    "expected_non_diagonal_rows_full": 992,
+    "non_zero_distance_rows": 992,
+    "existing_rows_loaded": 1024,
+    "routes_computed_this_run": 0,
+    "is_complete_snapshot": true
+  },
+  "fuel_reference": {
+    "selected": {
+      "tipo": "Regular",
+      "costo": 23.415,
+      "tipo_costo": "Regular $23.415"
+    },
+    "available_prices": [
+      {
+        "tipo": "Regular",
+        "costo": 23.415,
+        "tipo_costo": "Regular $23.415"
+      },
+      {
+        "tipo": "Premium",
+        "costo": 25.889,
+        "tipo_costo": "Premium $25.889"
+      },
+      {
+        "tipo": "Diésel",
+        "costo": 26.382,
+        "tipo_costo": "Diésel $26.382"
+      },
+      {
+        "tipo": "Gas",
+        "costo": 12.601,
+        "tipo_costo": "Gas $12.601"
+      }
+    ]
+  },
+  "api_call_counts": {
+    "buscalinea": 32,
+    "optima": 0,
+    "combustible": 1
+  },
+  "snapshot_status": {
+    "mode": "locked_snapshot",
+    "matrix_file": "costos_matriz.csv",
+    "sha256": "6774e6907f37819d70a891db3e3f148dc03409c1703b114505241f1824c9b60a",
+    "branch": "feat/inegi-full-rerun"
+  }
+}

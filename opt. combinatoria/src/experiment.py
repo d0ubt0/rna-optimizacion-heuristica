@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 from pathlib import Path
 from statistics import mean, pstdev
 from typing import Dict, List, Tuple
@@ -69,14 +69,33 @@ def run_experiment(
     output_dir: Path,
 ) -> Dict:
     config = load_config(config_path)
+    cost_cfg: Dict = dict(config.get('cost_data', {}))
+    cost_mode = str(cost_cfg.get('mode', 'snapshot')).strip().lower()
+    matrix_file = str(cost_cfg.get('matrix_file', 'costos_matriz.csv'))
 
     capitals = load_capitals(data_dir / 'capitales_32.csv')
     validate_capital_count(capitals, expected=32)
 
     vehicles = load_vehicle_catalog(data_dir / 'vehiculos.json')
     vehicle = select_vehicle(vehicles, config['vehicle_id'])
+    fuel_price_override = cost_cfg.get('fuel_price_mxn_per_l')
+    if fuel_price_override is not None:
+        vehicle = dict(vehicle)
+        vehicle['fuel_price_mxn_per_l'] = float(fuel_price_override)
 
-    distance_km, time_h, tolls_mxn = load_base_matrices(data_dir / 'costos_matriz.csv')
+    if cost_mode in ('snapshot', 'manual'):
+        distance_km, time_h, tolls_mxn = load_base_matrices(data_dir / matrix_file)
+    elif cost_mode == 'inegi_api':
+        raise ValueError(
+            "cost_data.mode='inegi_api' is not supported during optimization runs. "
+            "Run the ETL first to generate a snapshot matrix and then set mode='snapshot'."
+        )
+    else:
+        raise ValueError(
+            f"Unsupported cost_data.mode '{cost_mode}'. "
+            'Valid values: snapshot, manual, inegi_api.'
+        )
+
     validate_matrix(distance_km, 'distance_km')
     validate_matrix(time_h, 'time_h')
     validate_matrix(tolls_mxn, 'tolls_mxn')
@@ -147,6 +166,21 @@ def run_experiment(
 
     _write_comparison_csv(output_dir / 'comparativa_metricas.csv', comparison_rows)
 
+    best_by_algo_hour: Dict[Tuple[str, float], SolverResult] = {}
+    for result in all_results:
+        key = (result.algorithm, result.hourly_value_mxn)
+        previous = best_by_algo_hour.get(key)
+        if previous is None or result.total_cost < previous.total_cost:
+            best_by_algo_hour[key] = result
+
+    for (algorithm, hourly_value), result in best_by_algo_hour.items():
+        matrix = matrix_by_hour[hourly_value]
+        hourly_label = str(int(hourly_value)) if float(hourly_value).is_integer() else str(hourly_value)
+        _write_route_csv(
+            output_dir / f'mejor_ruta_{algorithm}_vh{hourly_label}.csv',
+            _route_to_rows(result.route, capitals, matrix),
+        )
+
     best_aco = min((r for r in all_results if r.algorithm == 'aco'), key=lambda x: x.total_cost)
     best_ga = min((r for r in all_results if r.algorithm == 'ga'), key=lambda x: x.total_cost)
     best_global = min(all_results, key=lambda x: x.total_cost)
@@ -170,6 +204,7 @@ def run_experiment(
         'best_aco': best_aco,
         'best_ga': best_ga,
         'best_global': best_global,
+        'best_by_algo_hour': best_by_algo_hour,
         'best_global_matrix': matrix_by_hour[best_global.hourly_value_mxn],
         'best_global_cost_mxn': compute_route_cost(
             best_global.route, matrix_by_hour[best_global.hourly_value_mxn]
