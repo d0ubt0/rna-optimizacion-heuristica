@@ -109,7 +109,7 @@ Fuente de datos de tablas: `opt. numerica/resultados_parte1_20corridas.csv`.
 ### 2.1 Definición del problema
 Un vendedor debe visitar todas las capitales de los 32 estados de México y regresar al origen (Ciudad de México en esta configuración).
 
-### 2.2 Modelado de costo
+### 2.2 Modelado de costo y trazabilidad de fuentes
 El costo entre ciudades se modeló como:
 
 \[
@@ -122,10 +122,33 @@ con
 combustible_{ij} = distancia_{ij} \cdot \frac{precio\_litro}{rendimiento\_{km/L}}
 \]
 
+**Fuente y metodología de extracción (corrección solicitada):**
+- Se dejó un pipeline ETL reproducible en `opt. combinatoria/scripts/costs_etl_inegi.py`.
+- Snapshot de matriz base: `opt. combinatoria/data/costos_matriz.csv`.
+- Metadatos de extracción: `opt. combinatoria/data/costos_fuentes.json`.
+- Snapshot de trabajo bloqueado (rama feat/inegi-full-rerun): SHA-256 6774e6907f37819d70a891db3e3f148dc03409c1703b114505241f1824c9b60a (timestamp UTC 2026-04-09T02:41:24.213206+00:00).
+- Endpoints oficiales usados de INEGI SAKBÉ v3.1:
+  - `buscalinea` (ajuste de cada capital a la red carretera),
+  - `optima` (distancia, tiempo y costo de peaje por par origen-destino),
+  - `combustible` (precio de referencia por tipo de combustible).
+- Token usado por variable de entorno (`INEGI_RUTEO_TOKEN`), sin exponer credenciales en el repositorio.
+
+**Comando de actualización del snapshot:**
+```bash
+$env:INEGI_RUTEO_TOKEN="<tu_token>"
+python "opt. combinatoria/scripts/costs_etl_inegi.py" --ignore-existing
+```
+
+**Contingencia manual (si la API no está disponible):**
+1. Mantener `costos_matriz.csv` como snapshot congelado.
+2. Recolectar distancia/tiempo/peaje por pares desde fuentes oficiales (INEGI Ruteo o SICT/CAPUFE).
+3. Documentar fecha, fuente y criterio de captura en `costos_fuentes.json`.
+4. Validar matriz completa 32x32 antes de ejecutar ACO/GA.
+
 ### 2.3 Vehículo y parámetro estudiado
 - Vehículo seleccionado: **Sedan Gasolina** (`vehicle_id=sedan_gasolina`).
 - Rendimiento: **15.5 km/L**.
-- Precio combustible: **24.2 MXN/L**.
+- Precio combustible configurado: **23.415 MXN/L** (referencia INEGI combustible tipo Regular).
 - Parámetro analizado: `valor_hora` en **[100, 300] MXN/h** con paso **50**.
 
 ### 2.4 Métodos implementados
@@ -137,40 +160,53 @@ Configuración usada (archivo `opt. combinatoria/data/config.yaml`):
 - ACO: `num_ants=55`, `iterations=120`, `alpha=1.0`, `beta=3.0`, `evaporation=0.35`, `q=120.0`.
 - GA: `population_size=140`, `generations=220`, `crossover_rate=0.9`, `mutation_rate=0.22`, `elite_size=4`, `tournament_size=4`.
 
-### 2.5 Resultados y visualización
+### 2.5 Resultados y visualización (mapa real)
 #### Tabla 5. Comparativa ACO vs GA por valor-hora
 | Valor hora (MXN/h) | Algoritmo | Mejor costo (MXN) | Promedio (MXN) | Desviación | Seed mejor |
 |---:|---|---:|---:|---:|---:|
-| 100 | ACO | 48133.25 | 48236.41 | 126.46 | 29 |
-| 100 | GA | 51941.51 | 52029.39 | 112.16 | 29 |
-| 150 | ACO | 57419.85 | 57743.30 | 229.02 | 13 |
-| 150 | GA | 61384.18 | 62505.10 | 823.67 | 13 |
-| 200 | ACO | 67191.28 | 67303.23 | 79.36 | 7 |
-| 200 | GA | 69230.55 | 71016.66 | 1813.90 | 7 |
-| 250 | ACO | 75694.35 | 76722.94 | 801.81 | 13 |
-| 250 | GA | 78371.23 | 81912.59 | 2577.75 | 13 |
-| 300 | ACO | 85506.73 | 85830.92 | 261.38 | 7 |
-| 300 | GA | 85065.01 | 89875.79 | 3437.38 | 7 |
+| 100 | ACO | 46698.84 | 47248.37 | 397.25 | 7 |
+| 100 | GA | 51931.08 | 53497.88 | 1957.28 | 29 |
+| 150 | ACO | 57038.91 | 57416.31 | 297.03 | 29 |
+| 150 | GA | 60204.85 | 62179.38 | 1742.49 | 29 |
+| 200 | ACO | 66286.27 | 66483.09 | 170.13 | 13 |
+| 200 | GA | 69546.06 | 70632.68 | 907.06 | 13 |
+| 250 | ACO | 75035.99 | 75788.82 | 542.52 | 13 |
+| 250 | GA | 74821.81 | 79040.76 | 3051.05 | 7 |
+| 300 | ACO | 83556.68 | 85088.15 | 1101.31 | 29 |
+| 300 | GA | 86982.29 | 91954.07 | 3640.59 | 29 |
 
-**Mejor solución global observada:** ACO con `valor_hora=100`, costo `48,133.25 MXN`.
+**Mejor solución global observada:** ACO con `valor_hora=100`, costo `46,698.84 MXN`.
 
 Artefactos:
-- **GIF de la mejor ruta:** [mejor_ruta_global.gif](opt.%20combinatoria/outputs/mejor_ruta_global.gif)
-- **Figura final de ruta:** [mejor_ruta_global.png](opt.%20combinatoria/outputs/mejor_ruta_global.png)
-- **Rutas por m?todo:** [mejor_ruta_aco.csv](opt.%20combinatoria/outputs/mejor_ruta_aco.csv), [mejor_ruta_ga.csv](opt.%20combinatoria/outputs/mejor_ruta_ga.csv)
+- **GIF de iteraciones GA sobre mapa real:** [ruta_ga_iteraciones_mapa_real.gif](opt.%20combinatoria/outputs/ruta_ga_iteraciones_mapa_real.gif)
+- **Figura final GA sobre mapa real:** [ruta_ga_iteraciones_mapa_real.png](opt.%20combinatoria/outputs/ruta_ga_iteraciones_mapa_real.png)
+- **GIF mejor solución global:** [mejor_ruta_global.gif](opt.%20combinatoria/outputs/mejor_ruta_global.gif)
+- **Figura final mejor solución global:** [mejor_ruta_global.png](opt.%20combinatoria/outputs/mejor_ruta_global.png)
+- **Rutas por método:** [mejor_ruta_aco.csv](opt.%20combinatoria/outputs/mejor_ruta_aco.csv), [mejor_ruta_ga.csv](opt.%20combinatoria/outputs/mejor_ruta_ga.csv)
 
-**Figura 3.** Recorrido final sobre mapa de M?xico.
+**Figura 3.** Iteraciones del algoritmo genético sobre mapa real de México.
 
-![Figura 3 - Recorrido final en mapa de M?xico](opt.%20combinatoria/outputs/mejor_ruta_global.png)
+![Figura 3 - Iteraciones GA en mapa real](opt.%20combinatoria/outputs/ruta_ga_iteraciones_mapa_real.gif)
 
-**Figura 4.** Evoluci?n iterativa de la mejor soluci?n (GIF).
+**Figura 4.** Mejor solución global en mapa real de México.
 
-![Figura 4 - Evoluci?n de la mejor soluci?n TSP](opt.%20combinatoria/outputs/mejor_ruta_global.gif)
+![Figura 4 - Mejor solución global en mapa real](opt.%20combinatoria/outputs/mejor_ruta_global.png)
+
+### 2.6 Recomendación al vendedor viajero (orden específico)
+**Recomendación principal (global):**
+Usar la ruta de ACO para `valor_hora=100`.
+
+Orden recomendado de visita:
+Ciudad de México -> Toluca -> Cuernavaca -> Puebla -> Tlaxcala -> Xalapa -> Villahermosa -> San Francisco de Campeche -> Mérida -> Chetumal -> Tuxtla Gutiérrez -> Oaxaca de Juárez -> Chilpancingo -> Morelia -> Santiago de Querétaro -> Guanajuato -> San Luis Potosí -> Aguascalientes -> Zacatecas -> Guadalajara -> Colima -> Tepic -> Durango -> Culiacán -> La Paz -> Hermosillo -> Mexicali -> Chihuahua -> Saltillo -> Monterrey -> Ciudad Victoria -> Pachuca -> Ciudad de México.
+
+**Escenario alterno (cuando se prioriza un patrón GA competitivo):**
+Para `valor_hora=250`, GA logra mejor mejor-caso que ACO (74,821.81 vs 75,035.99 MXN). Orden GA en ese escenario:
+Ciudad de México -> Xalapa -> Villahermosa -> San Francisco de Campeche -> Mérida -> Chetumal -> Tuxtla Gutiérrez -> Oaxaca de Juárez -> Chilpancingo -> Toluca -> Cuernavaca -> Puebla -> Tlaxcala -> Pachuca -> Santiago de Querétaro -> Morelia -> Colima -> Guadalajara -> Tepic -> Durango -> Culiacán -> La Paz -> Hermosillo -> Mexicali -> Chihuahua -> Saltillo -> Monterrey -> Ciudad Victoria -> San Luis Potosí -> Zacatecas -> Aguascalientes -> Guanajuato -> Ciudad de México.
 
 ## 3) Metodología y justificación técnica
 - Se usaron funciones benchmark clásicas para comparar métodos con distintas geometrías del paisaje de optimización (Rastrigin y Rosenbrock).
 - Se estandarizó el número de iteraciones y se evaluó robustez mediante múltiples corridas con diferentes semillas.
-- En TSP se modeló costo monetario total por arco incorporando tiempo, peajes y combustible, y se estudió sensibilidad al valor-hora.
+- En TSP se modeló costo monetario total por arco (tiempo, peajes y combustible) con snapshot trazable (`costos_matriz.csv`) y metadatos de fuente (`costos_fuentes.json`), además de sensibilidad al valor-hora.
 - Se priorizó reproducibilidad mediante configuración explícita y artefactos exportados (CSV/GIF/PNG).
 
 ## 4) Uso de IA
@@ -179,7 +215,7 @@ Registrar prompts principales y su impacto real en el resultado.
 | ID | Prompt usado | Objetivo | Resultado obtenido | Impacto en calidad/final |
 |---|---|---|---|---|
 | P1 | Genera una visualización animada (GIF) del mejor recorrido TSP sobre un mapa de México: dibuja las capitales con lat/lon, traza la ruta iteración a iteración y guarda mejor_ruta_global.gif y mejor_ruta_global.png con anotaciones de costo, seed y algoritmo. | Generar gifs para acelerar tiempo de desarrollo y usar razonamiento en objetivos mas importantes. | Gifs representando el mejor recorrido en el mapa de México. | Medio |
-| P2 | Propón hiperparámetros iniciales para ACO (alpha, beta, evaporación, q, número de hormigas) orientados a TSP de 32 nodos. | Definir una configuración inicial razonable de ACO para un TSP de 32 ciudades, que balancee exploración y explotación. | Se usó num_ants=55, iterations=120, alpha=1.0, beta=3.0, evaporation=0.35, q=120.0 (config actual), con desempeño competitivo en casi todo el barrido de valor_hora, incluyendo el mejor costo global del experimento (48,133.25 MXN a valor_hora=100) | medio |
+| P2 | Propón hiperparámetros iniciales para ACO (alpha, beta, evaporación, q, número de hormigas) orientados a TSP de 32 nodos. | Definir una configuración inicial razonable de ACO para un TSP de 32 ciudades, que balancee exploración y explotación. | Se usó num_ants=55, iterations=120, alpha=1.0, beta=3.0, evaporation=0.35, q=120.0 (config actual), con desempeño competitivo en casi todo el barrido de valor_hora, incluyendo el mejor costo global del experimento (46,698.84 MXN a valor_hora=100) | medio |
 | P3 | [completar] | [completar] | [completar] | [alto/medio/bajo + explicación] |
 
 Guía de análisis:
@@ -190,10 +226,10 @@ Guía de análisis:
 ## 5) Conclusiones
 - En Parte 1, los métodos heurísticos (en especial DE y PSO) alcanzaron mejores mínimos promedio que GD en los escenarios evaluados.
 - GD tuvo ventaja en costo de evaluación, pero menor calidad de solución en promedio para los casos más difíciles.
-- En Parte 2, ACO fue globalmente más competitivo para `valor_hora` bajos e intermedios; GA mostró mejor mejor-caso en `valor_hora=300`, con mayor variabilidad.
+- En Parte 2, ACO obtuvo la mejor solución global (`valor_hora=100`), y GA solo superó el mejor-caso de ACO en el escenario `valor_hora=250`, con mayor variabilidad entre semillas.
 - La modelación del costo con `valor_hora` cambió de forma significativa la ruta/costo óptimos, por lo que este parámetro es clave en análisis de sensibilidad.
 
-## 7) Bibliograf?a
+## 7) Bibliografia
 
 1. Rosenbrock, H. H. (1960). An automatic method for finding the greatest or least value of a function. The Computer Journal, 3(3), 175-184. https://doi.org/10.1093/comjnl/3.3.175
 2. Nocedal, J., & Wright, S. J. (2006). Numerical optimization (2nd ed.). Springer. https://doi.org/10.1007/978-0-387-40065-5
@@ -216,4 +252,14 @@ Guía de análisis:
 19. Secretaria de Infraestructura, Comunicaciones y Transportes (SICT). (2011). Carreteras V2 (incluye modulo Traza tu ruta). https://www.sct.gob.mx/index.php?id=1617
 20. Caminos y Puentes Federales de Ingresos y Servicios Conexos (CAPUFE). (2025). Tarifas CAPUFE [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/tarifas_capufe
 21. Comision Nacional de Energia (CNE). (2025). Historico de precios de gasolinas y diesel reportados por permisionario [Conjunto de datos]. datos.gob.mx. https://www.datos.gob.mx/dataset/historico_precios_gasolinas_y_diesel_reportados_por_permisionario
+22. Instituto Nacional de Estadistica y Geografia (INEGI). (2026). API de Ruteo (SAKBE v3.1). https://www.inegi.org.mx/servicios/Ruteo/
+
+
+
+
+
+
+
+
+
 

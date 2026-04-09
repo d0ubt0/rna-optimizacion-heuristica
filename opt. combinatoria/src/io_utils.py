@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 import json
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -7,7 +7,7 @@ import numpy as np
 
 
 def load_config(config_path: Path) -> Dict:
-    text = config_path.read_text(encoding='utf-8').strip()
+    text = config_path.read_text(encoding='utf-8-sig').strip()
     try:
         return json.loads(text)
     except json.JSONDecodeError as exc:
@@ -35,7 +35,7 @@ def load_capitals(capitals_path: Path) -> List[Dict]:
 
 
 def load_vehicle_catalog(vehicles_path: Path) -> List[Dict]:
-    vehicles = json.loads(vehicles_path.read_text(encoding='utf-8'))
+    vehicles = json.loads(vehicles_path.read_text(encoding='utf-8-sig'))
     if not isinstance(vehicles, list) or not vehicles:
         raise ValueError('vehiculos.json must contain a non-empty JSON array.')
     return vehicles
@@ -51,7 +51,7 @@ def select_vehicle(vehicles: List[Dict], vehicle_id: str) -> Dict:
 
 def load_base_matrices(cost_path: Path) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     rows: List[Dict] = []
-    with cost_path.open(newline='', encoding='utf-8') as f:
+    with cost_path.open(newline='', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         for row in reader:
             rows.append(row)
@@ -112,3 +112,5 @@ def find_start_index(capitals: List[Dict], start_capital: str) -> int:
             return idx
     names = ', '.join(c['capital'] for c in capitals)
     raise ValueError(f"start_capital '{start_capital}' not found. Available: {names}")
+
+

@@ -1,0 +1,34 @@
+step,capital,state,lat,lon,cumulative_cost_mxn
+0,Ciudad de Mexico,Ciudad de Mexico,19.4326,-99.1332,0.0
+1,Xalapa,Veracruz,19.5438,-96.9102,1646.616
+2,San Francisco de Campeche,Campeche,19.845,-90.5239,6874.754
+3,Merida,Yucatan,20.9674,-89.5926,7988.236
+4,Chetumal,Quintana Roo,18.5002,-88.2961,10229.431
+5,Villahermosa,Tabasco,17.9895,-92.9475,13752.131
+6,Tuxtla Gutierrez,Chiapas,16.7516,-93.116,14705.41
+7,Oaxaca de Juarez,Oaxaca,17.0732,-96.7266,17590.536
+8,Chilpancingo,Guerrero,17.5515,-99.5006,19664.459
+9,Puebla,Puebla,19.0413,-98.2062,21130.008
+10,Tlaxcala,Tlaxcala,19.3139,-98.2404,21340.951
+11,Cuernavaca,Morelos,18.9242,-99.2216,22211.613
+12,Toluca,Mexico,19.2826,-99.6557,22628.876
+13,Morelia,Michoacan,19.705,-101.194,23825.319
+14,Guanajuato,Guanajuato,21.019,-101.2574,24790.741
+15,Guadalajara,Jalisco,20.6597,-103.3496,26502.785
+16,Colima,Colima,19.2433,-103.725,27604.818
+17,La Paz,Baja California Sur,24.1426,-110.3128,33698.98
+18,Hermosillo,Sonora,29.0729,-110.9559,37884.965
+19,Mexicali,Baja California,32.6245,-115.4523,41970.116
+20,Chihuahua,Chihuahua,28.6329,-106.0691,49055.673
+21,Culiacan,Sinaloa,24.8091,-107.394,52068.328
+22,Durango,Durango,24.0277,-104.6532,54265.417
+23,Tepic,Nayarit,21.5042,-104.8946,56519.963
+24,Aguascalientes,Aguascalientes,21.8853,-102.2916,58578.857
+25,Zacatecas,Zacatecas,22.7709,-102.5832,59335.974
+26,Saltillo,Coahuila,25.4267,-100.9954,61759.503
+27,Monterrey,Nuevo Leon,25.6866,-100.3161,62318.201
+28,Ciudad Victoria,Tamaulipas,23.7369,-99.1411,64062.181
+29,San Luis Potosi,San Luis Potosi,22.1565,-100.9855,66126.747
+30,Santiago de Queretaro,Queretaro,20.5888,-100.3899,67565.311
+31,Pachuca,Hidalgo,20.1011,-98.7591,68954.405
+32,Ciudad de Mexico,Ciudad de Mexico,19.4326,-99.1332,69546.062
